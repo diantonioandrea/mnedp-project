@@ -20,7 +20,7 @@ function main
 	% Test 1.
 	firstMesh = builder(5);
 
-	fprintf("1. Valutazione degli errori con alpha = 5/3.\nMetodo semplice.\n")
+	fprintf("Errors evaluation, alpha = 5/3.\nSimple.\n")
 	
 	j = 1;
 	[uh, ~, ~] = solver(firstMesh, f);
@@ -45,7 +45,7 @@ function main
 	% Test 2.
 	secondMesh = builder(5);
 
-	fprintf("\n\nMetodo adattivo.\n")
+	fprintf("\n\nAdaptive.\n")
 
 	j = 1;
 	[uh, ~, ~] = solver(secondMesh, f);
@@ -74,7 +74,7 @@ function main
 	% Test 3.
 	firstMesh = builder(5);
 
-	fprintf("\n\n2.Valutazione degli errori con alpha = 10.\nMetodo semplice.\n")
+	fprintf("\n\nErrors evaluation, alpha = 10.\nSimple.\n")
 	
 	j = 1;
 	[uh, ~, ~] = solver(firstMesh, f);
@@ -99,7 +99,7 @@ function main
 	% Test 4.
 	secondMesh = builder(5);
 
-	fprintf("\n\nMetodo adattivo.\n")
+	fprintf("\n\nAdaptive.\n")
 
 	j = 1;
 	[uh, ~, ~] = solver(secondMesh, f);
@@ -124,7 +124,7 @@ function main
 
 	%% Graphics.
 
-	tiledlayout(2, 1);
+	tiledlayout(1, 2);
 	for j = 1:2:4
 		nexttile;
 		loglog(sizes(j, :), errors(j, :), DisplayName="Simple");
