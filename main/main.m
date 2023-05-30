@@ -12,8 +12,9 @@ function main
 	% Starting mesh.
 	sMesh = builder(5); % Built with 4 starting elements.
 
-	% Errors.
-	errors = zeros(2, 10);
+	% Tests.
+	steps = 10;
+	errors = zeros(2, steps);
 
 	%% Alpha = 5/3.
 	up = @(x) up_a(5/3, x);
@@ -30,7 +31,7 @@ function main
 	fprintf("\nElements: %d\tError: %e.", ...
 			length(firstMesh.elements), errors(1, j));
 
-	for j = 2:10
+	for j = 2:steps
 		firstMesh = refiner(firstMesh, []);
 		[uh, ~, ~] = solver(firstMesh, f);
 		errors(1, j) = errorEstimate(firstMesh, up, uh);
@@ -50,7 +51,7 @@ function main
 	fprintf("\nElements: %d\tError: %e.", ...
 			length(secondMesh.elements), errors(2, j));
 
-	for j = 2:10
+	for j = 2:steps
 		marked = marker(secondMesh, f);
 		secondMesh = refiner(secondMesh, marked);
 		[uh, ~, ~] = solver(secondMesh, f);
@@ -74,7 +75,7 @@ function main
 	fprintf("\nElements: %d\tError: %e.", ...
 			length(firstMesh.elements), errors(1, j));
 
-	for j = 2:10
+	for j = 2:steps
 		firstMesh = refiner(firstMesh, []);
 		[uh, ~, ~] = solver(firstMesh, f);
 		errors(1, j) = errorEstimate(firstMesh, up, uh);
@@ -94,7 +95,7 @@ function main
 	fprintf("\nElements: %d\tError: %e.", ...
 			length(secondMesh.elements), errors(2, j));
 
-	for j = 2:10
+	for j = 2:steps
 		marked = marker(secondMesh, f);
 		secondMesh = refiner(secondMesh, marked);
 		[uh, ~, ~] = solver(secondMesh, f);
