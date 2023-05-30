@@ -25,7 +25,7 @@ function [u, A, b] = solver(mesh, f)
 
 	b(j) = .5 * (f(xms) + f(xmd));
 
-	% Matrix.
+	% Internal part of A and b.
 	for j = 2:length(nds) - 3
 		hs = szs(j);
 		hd = szs(j + 1);
