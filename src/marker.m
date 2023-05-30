@@ -23,7 +23,7 @@ function marked = marker(mesh, f)
 end
 
 function jump = gradJump(mesh, uh, x)
-	if x == mesh.a || x == mesh.b; jump = 0; return; end
+	if x <= mesh.a || x >= mesh.b; jump = 0; return; end
 	ind = find(mesh.nodes == x);
 
 	hs = mesh.elements(ind - 1, 3);
