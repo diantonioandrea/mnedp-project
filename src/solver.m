@@ -56,5 +56,5 @@ function [u, A, b] = solver(mesh, f)
 
 	% Solution.
 	u = A\b;
-	u = [0 u' 0];
+	u = [0 u' 0]; % Applies DBC.
 end
