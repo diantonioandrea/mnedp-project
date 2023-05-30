@@ -8,5 +8,9 @@ Implementazione di un metodo "Adaptive 1D 1st-order Lagrange FEM" per la soluzio
 
 ## Contenuti
 
-- /src/: Codice sorgente per il FEM.
-- /main/: Codice sorgente di test per la relazione.
+- `/src/*` Codice sorgente per il FEM.
+	- `/src/builder.m` Costruttore della mesh.
+	- `/src/marker.m` Marcatore della mesh.
+	- `/src/refiner.m` Raffinatore della mesh.
+	- `/src/solver.m` Risolutore del prolema di Poisson sulla mesh.
+- `/main/main.m` Codice sorgente di test per la relazione.
