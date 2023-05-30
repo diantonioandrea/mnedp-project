@@ -10,11 +10,11 @@ function new = refiner(old, marked)
 	end
 
 	if mode == 1 % Halves the mesh elements.
-		new = builder(cat(2, old.nodes, old.centres), old.a, old.b);
+		new = builder([old.nodes, old.centres], old.a, old.b);
 
 	else % Refines by marked elements.
-		new = builder(cat(2, old.nodes, ...
-			old.centres(marked)), old.a, old.b);
+		new = builder([old.nodes, ...
+			old.centres(marked)], old.a, old.b);
 
 	end
 end
