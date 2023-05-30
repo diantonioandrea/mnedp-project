@@ -1,6 +1,6 @@
 # Metodi Numerici per Equazioni alle Derivate Parziali
 
-Codice per l'esame consegne del corso Metodi Numerici per Equazioni alle Derivate Parziali.
+Codice per l'esame del corso **Metodi Numerici per Equazioni alle Derivate Parziali**.
 
 ## Codice
 
