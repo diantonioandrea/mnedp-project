@@ -23,7 +23,7 @@ function [u, A, b] = solver(mesh, f)
 	A(j, j) = 1 / hs + 1 / hd;
 	A(j, j + 1) = -1 / hd;
 
-	b(j) = .5 * (f(xms) + f(xmd));
+	b(j) = .5 * (hs * f(xms) + hd * f(xmd));
 
 	% Internal part of A and b.
 	for j = 2:length(nds) - 3
@@ -37,7 +37,7 @@ function [u, A, b] = solver(mesh, f)
 		A(j, j) = 1 / hs + 1 / hd;
 		A(j, j + 1) = -1 / hd;
 	
-		b(j) = .5 * (f(xms) + f(xmd));
+		b(j) = .5 * (hs * f(xms) + hd * f(xmd));
 	end
 
 	% Last row, DBC.
@@ -52,8 +52,9 @@ function [u, A, b] = solver(mesh, f)
 	A(j, j - 1) = -1 / hs;
 	A(j, j) = 1 / hs + 1 / hd;
 
-	b(j) = .5 * (f(xms) + f(xmd));
+	b(j) = .5 * (hs * f(xms) + hd * f(xmd));
 
 	% Solution.
 	u = A\b;
+	u = [0 u' 0];
 end
