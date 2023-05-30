@@ -4,8 +4,9 @@ function new = refiner(old, marked)
 	% Checks mode.
 	if isempty(marked)
 		mode = 1;
-	else 
-		mode = 2; 
+	else
+		if length(marked) ~= length(old.nodes); error("Check markers"); end
+		mode = 2;
 	end
 
 	if mode == 1 % Halves the mesh elements.
