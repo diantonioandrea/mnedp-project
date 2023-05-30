@@ -18,6 +18,10 @@ function mesh = builder(nodes, a, b)
 		mesh.nodes = sort(nodes);
 	end
 
+	% Start and end.
+	mesh.a = a;
+	mesh.b = b;
+
 	% Defines the elements.
 	mesh.elements = zeros(length(mesh.nodes) - 1, 3);
 	mesh.elements(:, 1) = mesh.nodes(1:end-1);
@@ -25,5 +29,5 @@ function mesh = builder(nodes, a, b)
 	mesh.elements(:, 3) = mesh.elements(:, 2) - mesh.elements(:, 1);
 
 	% Central points.
-	mesh.centres = .5 * (mesh.elements(:, 2) + mesh.elements(:, 1));
+	mesh.centres = .5 * (mesh.elements(:, 2) + mesh.elements(:, 1))';
 end
