@@ -2,10 +2,11 @@
 % conditions on the specified mesh by first evaluating
 % A and b and solving Au = b for u (u = A\b).
 % Also returns A and b.
-function [u, A, b] = solver(mesh, f)
+function [u, A, b] = solver(mesh, func)
 	% Initialization.
 	nds = mesh.nodes;
 	szs = mesh.elements(:, 3); % Elements sizes.
+	f = @(x) -func(x);
 
 	A = zeros(length(nds) - 2);
 	b = zeros(length(nds) - 2, 1);
