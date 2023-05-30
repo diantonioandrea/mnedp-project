@@ -32,7 +32,7 @@ function jump = gradJump(mesh, uh, x)
 	gs = (uh(ind) - uh(ind - 1)) / hs;
 	gd = (uh(ind + 1) - uh(ind)) / hd;
 
-	jump = gd - gs;
+	jump = gs - gd;
 end
 
 function jump = absGradJump(mesh, uh, x)
