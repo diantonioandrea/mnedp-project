@@ -5,7 +5,7 @@ function new = refiner(old, marked)
 	if isempty(marked)
 		mode = 1;
 	else
-		if length(marked) ~= length(old.nodes); error("Check markers"); end
+		if length(marked) ~= length(old.nodes) - 1; error("Check markers"); end
 		mode = 2;
 	end
 
