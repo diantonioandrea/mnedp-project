@@ -6,7 +6,7 @@ Codice per l'esame del corso **Metodi Numerici per Equazioni alle Derivate Parzi
 
 Implementazione di un metodo "Adaptive 1D 1st-order Lagrange FEM" per la soluzione del problema di Poisson con dati al bordo di Dirichlet.
 
-## Contenuti
+## Contenuto
 
 - `/src/*` Codice sorgente per il FEM.
 	- `/src/builder.m` Costruttore della mesh.
