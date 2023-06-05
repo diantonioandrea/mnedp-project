@@ -1,6 +1,7 @@
+% Andrea Di Antonio, 858798.
 % Solves the 1D Poisson problem with Dirichlet boundary
 % conditions on the specified mesh by first evaluating
-% A and b and solving Au = b for u (u = A\b).
+% A and b and solving Auh = b for uh (uh = A\b).
 % Also returns A and b.
 function [uh, A, b] = solver(mesh, f)
 	% Initialization.

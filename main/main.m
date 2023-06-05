@@ -1,8 +1,9 @@
-% Andrea Di Antonio.
+% Andrea Di Antonio, 858798.
 function main
-	addpath("../src")
-	
 	%% Initialization
+	% FEM.
+	addpath("../src")
+
 	% Functions.
 	up_a = @(a, x) a * x.^(a - 1) - (a + 1) * x.^a; % u';
 	f_a = @(a, x) - a * (a - 1) * x.^(a - 2) + ...

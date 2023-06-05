@@ -1,3 +1,6 @@
+% Andrea Di Antonio, 858798.
+% Returns the marked elements of a mesh by evaluating the error
+% estimator on every element and picking the 25% highest values.
 function marked = marker(mesh, f)
 	[uh, ~, ~] = solver(mesh, f);
 	estimates = zeros(1, length(mesh.elements));

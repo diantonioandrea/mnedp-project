@@ -1,3 +1,13 @@
+% Andrea Di Antonio, 858798.
+% Builds a 1D mesh from 'a' to 'b' with 'nodes' nodes.
+% Returns a structure 'mesh':
+%	mesh.a: starting point.
+%	mesh.b: ending point.
+%	mesh.elements: elements of the mesh.
+%		mesh.elements(:, 1): left boundaries of the elements.
+%		mesh.elements(:, 2): righ boundaries of the elements.
+%		mesh.elements(:, 3): sizes of the elements.
+%	mesh.centres: central points of the elements.
 function mesh = builder(nodes, a, b)
 	% Input checks.
 	narginchk(1, 3);
