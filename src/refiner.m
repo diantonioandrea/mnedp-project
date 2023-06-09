@@ -9,7 +9,7 @@ function new = refiner(old, marked)
 		% Halves the mesh elements.
 		nodes = [old.nodes, old.centres];
 	else
-		if length(marked) ~= length(old.nodes) - 1
+		if length(marked) ~= length(old.centres)
 			error('Check markers')
 		end
 		% Refines by marked elements.
