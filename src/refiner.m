@@ -10,7 +10,7 @@ function new = refiner(old, marked)
 		nodes = [old.nodes, old.centres];
 	else
 		if length(marked) ~= length(old.centres)
-			error('Check markers')
+			error('Check markers.')
 		end
 		% Refines by marked elements.
 		nodes = [old.nodes, old.centres(marked)];
