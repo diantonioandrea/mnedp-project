@@ -6,20 +6,15 @@ function new = refiner(old, marked)
 	
 	% Checks mode.
 	if isempty(marked)
-		mode = 1;
+		% Halves the mesh elements.
+		nodes = [old.nodes, old.centres];
 	else
 		if length(marked) ~= length(old.nodes) - 1
 			error('Check markers')
 		end
-		mode = 2;
+		% Refines by marked elements.
+		nodes = [old.nodes, old.centres(marked)];
 	end
 
-	if mode == 1 % Halves the mesh elements.
-		new = builder([old.nodes, old.centres], old.a, old.b);
-
-	else % Refines by marked elements.
-		new = builder([old.nodes, ...
-			old.centres(marked)], old.a, old.b);
-
-	end
+	new = builder(nodes, old.a, old.b);
 end

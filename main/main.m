@@ -124,14 +124,21 @@ function main
 	end
 
 	%% Graphics.
+	
+	green = [33, 153, 0] / 255;
+	red = [220, 50, 47] / 255;
 
-	tiledlayout(1, 2);
+	tiledlayout(2, 1);
 	for j = 1:2:4
 		nexttile;
-		loglog(sizes(j, :), errors(j, :), DisplayName='Simple');
+		loglog(sizes(j, :), errors(j, :), ...
+			DisplayName='Simple', LineWidth=2, ...
+			Color=red);
 		hold on;
 
-		loglog(sizes(j + 1, :), errors(j + 1, :), DisplayName='Adaptive.');
+		loglog(sizes(j + 1, :), errors(j + 1, :), ...
+			DisplayName='Adaptive.', LineWidth=2, ...
+			Color=green);
 
 		hold off;
 		legend;
