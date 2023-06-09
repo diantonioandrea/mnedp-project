@@ -3,6 +3,8 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 
+\usepackage{listings}
+
 \usepackage{titlesec}
 
 \usepackage{graphicx}
@@ -32,11 +34,28 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=solarized-green,
-    urlcolor=solarized-orange,
+    urlcolor=solarized-red,
 	pdftitle={Adaptive 1D 1st-order Lagrange FEM},
     pdfpagemode=FullScreen,
 	pdfauthor={Andrea Di Antonio}
 }
+
+\usepackage{courier}
+\lstdefinestyle{code}{
+    commentstyle=\color{solarized-base1},
+    numberstyle=\color{solarized-base1},
+    keywordstyle=\color{solarized-green},
+    stringstyle=\color{solarized-red},
+    basicstyle=\ttfamily\color{solarized-base02},
+    breaklines=true,
+    captionpos=b,
+    showstringspaces=false,
+    keepspaces=true,
+    tabsize=4,
+    numbers=left
+}
+
+\lstset{style=code}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -52,13 +71,14 @@
 \begin{document}
 	\maketitle
 	\thispagestyle{fancy}
-	
+
 	\begin{abstract}
 		\begin{center}
             Report for the course \textit{Metodi Numerici per Equazioni alle Derivate Parziali} on the definition and costruction of an \textit{Adaptive 1D 1st-order Lagrange FEM}\footnote{Written in MATLAB.} and its subsequent analysis.
         \end{center}
 	\end{abstract}
 
+    \newpage
     \tableofcontents
 
     \newpage
@@ -70,4 +90,8 @@
 
     \newpage
     \section{Adaptive Method}
+
+    \newpage
+    \section{FEM Source Code}
+    \input{sections/code.tex}
 \end{document}

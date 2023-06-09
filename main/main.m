@@ -2,7 +2,7 @@
 function main
 	%% Initialization
 	% FEM.
-	addpath("../src")
+	addpath('../src')
 
 	% Functions.
 	up_a = @(a, x) a * x.^(a - 1) - (a + 1) * x.^a; % u';
@@ -21,7 +21,7 @@ function main
 	% Test 1.
 	firstMesh = builder(5);
 
-	fprintf("Errors evaluation, alpha = 5/3.\nSimple.\n")
+	fprintf('Errors evaluation, alpha = 5/3.\nSimple.\n')
 	
 	j = 1;
 	[uh, ~, ~] = solver(firstMesh, f);
@@ -29,7 +29,7 @@ function main
 	errors(1, j) = errorEstimate(firstMesh, up, uh);
 	sizes(1, j) = length(firstMesh.elements);
 
-	fprintf("\nElements: %d\tError: %e.", ...
+	fprintf('\nElements: %d\tError: %e.', ...
 			length(firstMesh.elements), errors(1, j));
 
 	for j = 2:steps
@@ -39,14 +39,14 @@ function main
 		errors(1, j) = errorEstimate(firstMesh, up, uh);
 		sizes(1, j) = length(firstMesh.elements);
 		
-		fprintf("\nElements: %d\tError: %e.", ...
+		fprintf('\nElements: %d\tError: %e.', ...
 			length(firstMesh.elements), errors(1, j));
 	end
 	
 	% Test 2.
 	secondMesh = builder(5);
 
-	fprintf("\n\nAdaptive.\n")
+	fprintf('\n\nAdaptive.\n')
 
 	j = 1;
 	[uh, ~, ~] = solver(secondMesh, f);
@@ -54,7 +54,7 @@ function main
 	errors(2, j) = errorEstimate(secondMesh, up, uh);
 	sizes(2, j) = length(secondMesh.elements);
 
-	fprintf("\nElements: %d\tError: %e.", ...
+	fprintf('\nElements: %d\tError: %e.', ...
 			length(secondMesh.elements), errors(2, j));
 
 	for j = 2:steps
@@ -65,7 +65,7 @@ function main
 		errors(2, j) = errorEstimate(secondMesh, up, uh);
 		sizes(2, j) = length(secondMesh.elements);
 		
-		fprintf("\nElements: %d\tError: %e.", ...
+		fprintf('\nElements: %d\tError: %e.', ...
 			length(secondMesh.elements), errors(2, j));
 	end
 	%% Alpha = 10.
@@ -75,7 +75,7 @@ function main
 	% Test 3.
 	firstMesh = builder(5);
 
-	fprintf("\n\nErrors evaluation, alpha = 10.\nSimple.\n")
+	fprintf('\n\nErrors evaluation, alpha = 10.\nSimple.\n')
 	
 	j = 1;
 	[uh, ~, ~] = solver(firstMesh, f);
@@ -83,7 +83,7 @@ function main
 	errors(3, j) = errorEstimate(firstMesh, up, uh);
 	sizes(3, j) = length(firstMesh.elements);
 
-	fprintf("\nElements: %d\tError: %e.", ...
+	fprintf('\nElements: %d\tError: %e.', ...
 			length(firstMesh.elements), errors(3, j));
 
 	for j = 2:steps
@@ -93,14 +93,14 @@ function main
 		errors(3, j) = errorEstimate(firstMesh, up, uh);
 		sizes(3, j) = length(firstMesh.elements);
 		
-		fprintf("\nElements: %d\tError: %e.", ...
+		fprintf('\nElements: %d\tError: %e.', ...
 			length(firstMesh.elements), errors(3, j));
 	end
 
 	% Test 4.
 	secondMesh = builder(5);
 
-	fprintf("\n\nAdaptive.\n")
+	fprintf('\n\nAdaptive.\n')
 
 	j = 1;
 	[uh, ~, ~] = solver(secondMesh, f);
@@ -108,7 +108,7 @@ function main
 	errors(4, j) = errorEstimate(secondMesh, up, uh);
 	sizes(4, j) = length(secondMesh.elements);
 
-	fprintf("\nElements: %d\tError: %e.", ...
+	fprintf('\nElements: %d\tError: %e.', ...
 			length(secondMesh.elements), errors(4, j));
 
 	for j = 2:steps
@@ -119,7 +119,7 @@ function main
 		errors(4, j) = errorEstimate(secondMesh, up, uh);
 		sizes(4, j) = length(secondMesh.elements);
 		
-		fprintf("\nElements: %d\tError: %e.", ...
+		fprintf('\nElements: %d\tError: %e.', ...
 			length(secondMesh.elements), errors(4, j));
 	end
 
@@ -128,10 +128,10 @@ function main
 	tiledlayout(1, 2);
 	for j = 1:2:4
 		nexttile;
-		loglog(sizes(j, :), errors(j, :), DisplayName="Simple");
+		loglog(sizes(j, :), errors(j, :), DisplayName='Simple');
 		hold on;
 
-		loglog(sizes(j + 1, :), errors(j + 1, :), DisplayName="Adaptive.");
+		loglog(sizes(j + 1, :), errors(j + 1, :), DisplayName='Adaptive.');
 
 		hold off;
 		legend;
