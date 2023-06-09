@@ -8,7 +8,8 @@ Let's start by considering the following problem, given $\Omega = (0, 1)$:
 	\end{cases},
 \end{gather}
 which is the \textit{Poisson equation} on $\Omega$ with \textit{Dirichlet's boundary conditions}.
-In this problem we'll consider a source $f(x)$ evaluated by considering the exact solution $u_{\alpha}$:
+
+We'll consider a source $f(x)$ evaluated by considering the exact solution $u_{\alpha}$:
 \begin{gather}
 	u_{\alpha}(x) = x^{\alpha} (1 - x),
 \end{gather}
@@ -17,7 +18,7 @@ on $\alpha > 1.5$, so that:
 	f(x) = \alpha (\alpha + 1) x^{\alpha - 1} - \alpha (\alpha - 1) x^{\alpha - 2}.
 \end{gather}
 
-\subsection{Weak Formulation and Finite Element Discretization}
+\subsection{Weak Formulation and Finite Element Discretization} \label{fem_definition}
 
 The weak formulation for the problem requires to find a $u \in V = H_0^1(\Omega)$ such that:
 \begin{gather}

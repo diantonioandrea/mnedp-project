@@ -3,7 +3,7 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 
-\usepackage{listings}
+\usepackage{nameref}
 
 \usepackage{titlesec}
 
@@ -41,6 +41,7 @@
 }
 
 \usepackage{courier}
+\usepackage{listings}
 \lstdefinestyle{code}{
     commentstyle=\color{solarized-base1},
     numberstyle=\color{solarized-base1},
@@ -87,9 +88,13 @@
 
     \newpage
     \section{Finite Element Method}
+    \input{sections/fem.tex}
 
     \newpage
-    \section{Adaptive Method}
+    \section{Tests Over a Sequence of Uniform Meshes}
+
+    \newpage
+    \section{Adaptive Method and Comparisons}
 
     \newpage
     \section{FEM Source Code}
