@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\usepackage{titlesec}
+
+\usepackage{graphicx}
+\graphicspath{{./Pictures/}}
+
+\usepackage{xcolor-solarized}
+\usepackage{pagecolor}
+\color{solarized-base02}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[a4paper]{geometry}
+\geometry{
+    inner=20mm,
+    outer=20mm,
+    top=30mm,
+    bottom=30mm,
+    heightrounded,
+    marginparwidth=50pt,
+    marginparsep=20pt,
+    headsep=25pt,
+    headheight=30pt
+}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=solarized-green,
+    urlcolor=solarized-orange,
+	pdftitle={Adaptive 1D 1st-order Lagrange FEM},
+    pdfpagemode=FullScreen,
+	pdfauthor={Andrea Di Antonio}
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{Andrea Di Antonio}
+\fancyhead[L]{Adaptive 1D 1st-order Lagrange FEM}
+\fancyfoot[C]{Page \thepage}
+
+\title{Adaptive 1D 1st-order Lagrange FEM}
+\author{Andrea Di Antonio, 858798 \\ \hyperlink{mailto:a.diantonio1@campus.unimib.it}{a.diantonio1@campus.unimib.it}}
+\date{July 27, 2023}
+
+\begin{document}
+	\maketitle
+	\thispagestyle{fancy}
+	
+	\begin{abstract}
+		\begin{center}
+            Report for the course \textit{Metodi Numerici per Equazioni alle Derivate Parziali} on the definition and costruction of an \textit{Adaptive 1D 1st-order Lagrange FEM}\footnote{Written in MATLAB.} and its subsequent analysis.
+        \end{center}
+	\end{abstract}
+\end{document}

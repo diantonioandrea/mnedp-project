@@ -1,3 +1,7 @@
 # MATLAB
 
 **/*.asv
+
+# LaTeX
+
+report/output
