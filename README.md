@@ -13,4 +13,5 @@ Implementazione di un metodo "Adaptive 1D 1st-order Lagrange FEM" per la soluzio
 	- `/src/marker.m` Marcatore della mesh.
 	- `/src/refiner.m` Raffinatore della mesh.
 	- `/src/solver.m` Risolutore del prolema di Poisson sulla mesh.
-- `/main/main.m` Codice sorgente di test per la relazione.
+- `/main/*` Codici sorgente di test per la relazione.
+- `report/report.tex` Relazione.
