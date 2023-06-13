@@ -1,5 +1,7 @@
 \documentclass[12pt]{article}
 \newcommand{\reporttitle}{Adaptive 1D 1st-order Lagrange FEM}
+\newcommand{\accentcolor}{solarized-green}
+\newcommand{\urlcolor}{solarized-red}
 
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -33,31 +35,14 @@
 
 \usepackage{hyperref}
 \hypersetup{
+    linktocpage=true,
     colorlinks=true,
-    linkcolor=solarized-green,
-    urlcolor=solarized-red,
+    linkcolor=\accentcolor,
+    urlcolor=\urlcolor,
 	pdftitle={\reporttitle},
     pdfpagemode=FullScreen,
 	pdfauthor={Andrea Di Antonio}
 }
-
-\usepackage{courier}
-\usepackage{listings}
-\lstdefinestyle{code}{
-    commentstyle=\color{solarized-base1},
-    numberstyle=\color{solarized-base1},
-    keywordstyle=\color{solarized-green},
-    stringstyle=\color{solarized-red},
-    basicstyle=\ttfamily\color{solarized-base02},
-    breaklines=true,
-    captionpos=b,
-    showstringspaces=false,
-    keepspaces=true,
-    tabsize=4,
-    numbers=left
-}
-
-\lstset{style=code}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -96,8 +81,4 @@
 
     \newpage
     \section{Adaptive Method and Comparisons}
-
-    \newpage
-    \section{FEM Source Code}
-    \input{sections/code.tex}
 \end{document}
