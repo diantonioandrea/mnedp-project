@@ -1,5 +1,5 @@
 % Andrea Di Antonio, 858798.
-function main
+function comparison
 	%% Initialization
 	% FEM.
 	addpath('../src')
