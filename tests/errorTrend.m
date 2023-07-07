@@ -112,7 +112,7 @@ function errorTrend
 	fprintf("\n\nalpha = 5/3, y = %fx + (%f)", ...
 		coeffs(1, 1), coeffs(1, 2));
 	fprintf("\nalpha = 10, y = %fx + (%f)\n", ...
-		coeffs(1, 1), coeffs(1, 2));
+		coeffs(2, 1), coeffs(2, 2));
 end
 
 function err = errorEstimate(mesh, up, uh)
