@@ -48,7 +48,7 @@ Having defined a 1st-order Lagrangian FEM, we have for both values of $\alpha$ t
 	|u - u_h|_{1, \Omega} \le C (\max_{K \in T_h} h_K)|u|_{s+1, \Omega}.
 \end{gather}
 
-By:
+By\footnote{For an appropriate choice of $s$.}:
 \begin{gather}
 	\max_{K \in T_h} h_K = h, \\
 	|u|_{s+1, \Omega} < +\infty,
@@ -64,8 +64,8 @@ we have:
 	\caption{Error trend against mesh size for a sequence of uniform meshes.}
 \end{figure}
 
-\noindent Moreover a polynomial interpolation returns the following results which confirm the expected error trend on uniform meshes.
+\noindent Moreover a polynomial interpolation returns the following results which confirm the expected error trend on uniform meshes, as they are decreasing slightly slower than linearly.
 \begin{verbatim}
-alpha = 5/3, y = 1.003215x + (-0.435934)
-alpha = 10, y = 1.014542x + (-0.665838)
+alpha = 5/3, y = 0.988762x + (0.006448)
+alpha = 10, y = 0.964138x + (0.389059)
 \end{verbatim}

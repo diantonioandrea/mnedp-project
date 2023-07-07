@@ -125,7 +125,9 @@ function err = errorEstimate(mesh, up, uh)
 
 		gh = (uh(j + 1) - uh(j)) / h;
 
-		err = err + .5 * h * sqrt((up(xs) - gh)^2 + ...
+		err = err + .5 * h * ((up(xs) - gh)^2 + ...
 			(up(xd) - gh)^2);
 	end
+
+	err = sqrt(err);
 end
