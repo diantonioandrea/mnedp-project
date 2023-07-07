@@ -43,7 +43,7 @@ Given what we've said on \nameref{sob_regularity}, and by the following corollar
 	with $p = \min(s, k)$.
 \end{theorem}
 
-Having defined a 1st-order Lagrangian FEM, we have for both values of $\alpha$ that $p = 1$, so that\footnote{The value of $s$ depends on the value of $\alpha$ chosen but it surely is greater than 1.}:
+Having defined a 1st-order Lagrangian FEM, we have for both values of $\alpha$ that $p = 1$, so that\footnote{The value of $s$ depends on the value of $\alpha$. We can always choose $s > k$.}:
 \begin{gather}
 	|u - u_h|_{1, \Omega} \le C (\max_{K \in T_h} h_K)|u|_{s+1, \Omega}.
 \end{gather}
@@ -64,7 +64,7 @@ we have:
 	\caption{Error trend against mesh size for a sequence of uniform meshes.}
 \end{figure}
 
-\noindent Moreover a polynomial interpolation returns the following results which confirm the error trend on uniform meshes.
+\noindent Moreover a polynomial interpolation returns the following results which confirm the expected error trend on uniform meshes.
 \begin{verbatim}
 alpha = 5/3, y = 1.003215x + (-0.435934)
 alpha = 10, y = 1.003215x + (-0.435934)
