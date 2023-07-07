@@ -125,7 +125,7 @@ function comparison
 
 	%% Graphics.
 	
-	green = [33, 153, 0] / 255;
+	green = [133, 153, 0] / 255;
 	red = [220, 50, 47] / 255;
 
 	tiledlayout(2, 1);

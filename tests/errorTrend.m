@@ -78,7 +78,7 @@ function errorTrend
 
 	%% Graphics.
 	
-	green = [33, 153, 0] / 255;
+	green = [133, 153, 0] / 255;
 	red = [220, 50, 47] / 255;
 
 	loglog(sizes(1, :), errors(1, :), ...

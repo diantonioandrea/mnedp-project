@@ -57,7 +57,7 @@
 \fancyhf{}
 \fancyhead[R]{Andrea Di Antonio}
 \fancyhead[L]{\reporttitle}
-\fancyfoot[C]{Page \thepage}
+\fancyfoot[C]{\thepage}
 
 \title{\reporttitle}
 \author{Andrea Di Antonio, 858798 \\ \hyperlink{mailto:a.diantonio1@campus.unimib.it}{a.diantonio1@campus.unimib.it}}
@@ -66,6 +66,7 @@
 \setcounter{tocdepth}{2}
 
 \begin{document}
+    \pagenumbering{roman}
 	\maketitle
 	\thispagestyle{fancy}
 
@@ -79,6 +80,7 @@
     \tableofcontents
 
     \newpage
+    \pagenumbering{arabic}
     \section{Problem Introduction}
     \input{sections/introduction.tex}
 
