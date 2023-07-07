@@ -20,9 +20,21 @@ on $\alpha > 1.5$, so that:
 
 Through the analysis of this problem, we'll stick to these two cases: $\alpha = 5/3, 10$.
 
-\subsubsection{Solution's Sobolev Regularity}
+\subsubsection{Solution's Sobolev Regularity} \label{sob_regularity}
 
-% To be discussed
+Let's discuss the Sobolev regularity for the two cases: $\alpha = 5/3, 10$.
+
+Given $\alpha = 10$, we have that $\forall k \in \N$:
+\begin{gather}
+	u_{10}(x) = x^{10} (1 - x) \in H^{k}(\Omega),
+\end{gather}
+being $u_{10}(x)$ a polynomial function, so that we can conclude that $u_{10}$ has a Sobolev regularity of $+\infty$.
+
+Given $\alpha = 5/3$, however, we have that:
+\begin{gather}
+	u_{5/3}(x) = x^{5/3} - x^{7/3} \in H^{k}(\Omega),
+\end{gather}
+$\forall k \in \{0, 1, 2\}$, which are the only values of $k$ for which $D^{\gamma} u_{5/3}(x) \in L^2(\Omega)$ given $\gamma \le k$, so that we can conclude that $u_{10}$ has a Sobolev regularity of $2$.
 
 \subsection{Weak Formulation and Finite Element Discretization} \label{fem_definition}
 
@@ -37,5 +49,5 @@ where:
 
 By introducing $V_h$ as the linear Lagrangian finite element space on a given partition $T_h$ of $\Omega$ we have the finite element discretization which requires to find a $u_h \in V_h$ such that:
 \begin{gather}
-	a(u_h, v_h) = (f, v_h)_{0, \Omega} \quad \forall v_h \in V_h,
+	a(u_h, v_h) = (f, v_h)_{0, \Omega} \quad \forall v_h \in V_h.
 \end{gather}

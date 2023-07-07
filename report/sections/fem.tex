@@ -6,7 +6,15 @@ As seen on \nameref{fem_definition}, the finite element discretization reads:
 
 \subsection{FEM Convergence on Uniform Meshes}
 
-% To be discussed
+Given what we've said on \nameref{sob_regularity}, and by the following corollary to the \textit{Deny-Lions' Lemma}:
+
+\begin{theorem}[Deny-Lions corollary]
+	Let $u, u_h$ be the solution respectively to the weak formulation of a Poisson problem and its associated order k Lagrangian FEM with shape-regular and quasi-uniform mesh $T_h$. Let $u \in H^s(\Omega)$ for $s \ge 0$, then:
+	\begin{gather}
+		|u - u_h|_{1, \Omega} \lesssim (\max_{K \in T_h} h_K)^{p}|u|_{s+1, \Omega},
+	\end{gather}
+	with $p = \min(s, k)$.
+\end{theorem}
 
 \subsection{FEM Implementation}
 
