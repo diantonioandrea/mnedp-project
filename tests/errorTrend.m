@@ -90,9 +90,29 @@ function errorTrend
 	loglog(sizes(2, :), errors(2, :), ...
 		DisplayName='alpha = 10', LineWidth=2, ...
 		Color=green);
+	
+	xlabel("Mesh Size (h)");
+	ylabel("Error")
 
 	hold off;
 	legend;
+
+	saveas(gcf, "../gallery/errorTrend", "jpeg")
+
+	%% Interpolation
+
+	coeffs = zeros(2, 2);
+	coeffs(1, :) = polyfit(log(sizes(1, :)), ...
+		log(errors(1, :)), 1);
+	coeffs(2, :) = polyfit(log(sizes(2, :)), ...
+		log(errors(2, :)), 1);
+	
+	% Prints coefficients.
+	fprintf("\n\nInterpolation coefficients.")
+	fprintf("\n\nalpha = 5/3, y = %fx + (%f)", ...
+		coeffs(1, 1), coeffs(1, 2));
+	fprintf("\nalpha = 10, y = %fx + (%f)\n", ...
+		coeffs(1, 1), coeffs(1, 2));
 end
 
 function err = errorEstimate(mesh, up, uh)
