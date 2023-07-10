@@ -3,9 +3,10 @@
 % estimator on every element and picking the 25% highest values.
 function marked = marker(mesh, f)
 	[uh, ~, ~] = solver(mesh, f);
-	estimates = zeros(1, length(mesh.elements));
+	els = length(mesh.elements);
+	estimates = zeros(1, els);
 
-	for j = 1:length(estimates)
+	for j = 1:els
 		h = mesh.elements(j, 3);
 		xs = mesh.nodes(j);
 		xd = mesh.nodes(j + 1);
@@ -17,12 +18,12 @@ function marked = marker(mesh, f)
 
 		% gradJump estimate.
 		estimates(j) = estimates(j) + .5 * h * ...
-			(absGradJump(mesh, uh, xs) - ...
+			(absGradJump(mesh, uh, xs) + ...
 			absGradJump(mesh, uh, xd));
 	end
 
-	marked = estimates >= min(maxk(estimates, ...
-		fix(length(estimates)/4)));
+	estimates = sqrt(estimates);
+	marked = estimates >= prctile(estimates, 75);
 end
 
 function jump = gradJump(mesh, uh, x)
