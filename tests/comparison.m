@@ -127,22 +127,38 @@ function comparison
 	
 	green = [133, 153, 0] / 255;
 	red = [220, 50, 47] / 255;
-
+	
 	tiledlayout(2, 1);
-	for j = 1:2:4
-		nexttile;
-		loglog(sizes(j, :), errors(j, :), ...
-			DisplayName='Simple', LineWidth=2, ...
-			Color=red);
-		hold on;
 
-		loglog(sizes(j + 1, :), errors(j + 1, :), ...
-			DisplayName='Adaptive.', LineWidth=2, ...
-			Color=green);
+	% Alpha = 5/3.
+	nexttile;
+	loglog(sizes(1, :), errors(1, :), ...
+		DisplayName='Simple, alpha = 5/3.', LineWidth=2, ...
+		Color=red);
+	hold on;
 
-		hold off;
-		legend;
-	end
+	loglog(sizes(2, :), errors(2, :), ...
+		DisplayName='Adaptive, alpha = 5/3.', LineWidth=2, ...
+		Color=green);
+
+	hold off;
+	legend;
+	
+	% Alpha = 10.
+	nexttile;
+	loglog(sizes(3, :), errors(3, :), ...
+		DisplayName='Simple, alpha = 10.', LineWidth=2, ...
+		Color=red);
+	hold on;
+
+	loglog(sizes(4, :), errors(4, :), ...
+		DisplayName='Adaptive, alpha = 10.', LineWidth=2, ...
+		Color=green);
+
+	hold off;
+	legend;
+
+	saveas(gcf, "../gallery/comparison", "jpeg")
 end
 
 function err = errorEstimate(mesh, up, uh)
