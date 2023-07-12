@@ -96,7 +96,7 @@ function errorTrend
 		Color=green);
 	
 	xlabel("Mesh Size (h)");
-	ylabel("Error")
+	ylabel("Error");
 
 	% Interpolation
 

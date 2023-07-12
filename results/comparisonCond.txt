@@ -1,0 +1,53 @@
+Errors evaluation, alpha = 5/3.
+Simple.
+
+Condition number: 5.828427e+00	Error: 2.493096e-01.
+Condition number: 2.527414e+01	Error: 1.287809e-01.
+Condition number: 1.030869e+02	Error: 6.548363e-02.
+Condition number: 4.143451e+02	Error: 3.307970e-02.
+Condition number: 1.659380e+03	Error: 1.665622e-02.
+Condition number: 6.639518e+03	Error: 8.370898e-03.
+Condition number: 2.656007e+04	Error: 4.201754e-03.
+Condition number: 1.062423e+05	Error: 2.107209e-03.
+Condition number: 4.249712e+05	Error: 1.056088e-03.
+Condition number: 1.699887e+06	Error: 5.290231e-04.
+
+Adaptive.
+
+Condition number: 5.828427e+00	Error: 2.493096e-01.
+Condition number: 1.044449e+01	Error: 2.327644e-01.
+Condition number: 2.132872e+01	Error: 2.266713e-01.
+Condition number: 4.550010e+01	Error: 1.611187e-01.
+Condition number: 1.219125e+02	Error: 1.213041e-01.
+Condition number: 3.258645e+02	Error: 1.020971e-01.
+Condition number: 7.726856e+02	Error: 7.119629e-02.
+Condition number: 2.120765e+03	Error: 5.634364e-02.
+Condition number: 5.685014e+03	Error: 4.549836e-02.
+Condition number: 1.396564e+04	Error: 3.357480e-02.
+
+Errors evaluation, alpha = 10.
+Simple.
+
+Condition number: 5.828427e+00	Error: 3.247849e-01.
+Condition number: 2.527414e+01	Error: 2.018118e-01.
+Condition number: 1.030869e+02	Error: 1.103291e-01.
+Condition number: 4.143451e+02	Error: 5.653510e-02.
+Condition number: 1.659380e+03	Error: 2.844530e-02.
+Condition number: 6.639518e+03	Error: 1.424507e-02.
+Condition number: 2.656007e+04	Error: 7.125345e-03.
+Condition number: 1.062423e+05	Error: 3.563024e-03.
+Condition number: 4.249712e+05	Error: 1.781556e-03.
+Condition number: 1.699887e+06	Error: 8.907834e-04.
+
+Adaptive.
+
+Condition number: 5.828427e+00	Error: 3.247849e-01.
+Condition number: 1.044449e+01	Error: 2.029082e-01.
+Condition number: 2.132872e+01	Error: 1.147418e-01.
+Condition number: 5.751892e+01	Error: 6.526698e-02.
+Condition number: 1.241403e+02	Error: 4.599753e-02.
+Condition number: 2.196009e+02	Error: 3.518341e-02.
+Condition number: 4.825782e+02	Error: 2.919550e-02.
+Condition number: 6.325668e+02	Error: 2.086009e-02.
+Condition number: 9.115371e+02	Error: 1.695711e-02.
+Condition number: 2.068658e+03	Error: 1.412667e-02.

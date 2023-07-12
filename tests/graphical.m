@@ -22,16 +22,19 @@ function graphical
     nexttile;
 	
 	plot(uMesh.nodes, u(uMesh.nodes), ...
-		DisplayName='u(x), alpha = 5/3', LineWidth=2, ...
+		DisplayName='u(x), \alpha = 5/3', LineWidth=2, ...
 		Color=green);
     hold on;
 
     plot(uMesh.nodes, uh, ...
-		DisplayName='u_h(x), alpha = 5/3', LineWidth=2, ...
+		DisplayName='u_h(x), \alpha = 5/3', LineWidth=2, ...
 		Color=red,LineStyle='--');
 
+	xlabel("X");
+	ylabel("Y");
+
     hold off;
-    legend;
+    legend(Location='northwest');
 
     %% Alpha = 10.
     u = @(x) u_a(10, x);
@@ -42,16 +45,19 @@ function graphical
     nexttile;
 
     plot(uMesh.nodes, u(uMesh.nodes), ...
-		DisplayName='u(x), alpha = 10', LineWidth=2, ...
+		DisplayName='u(x), \alpha = 10', LineWidth=2, ...
 		Color=green);
     hold on;
 	
 	plot(uMesh.nodes, uh, ...
-		DisplayName='u_h(x), alpha = 10', LineWidth=2, ...
+		DisplayName='u_h(x), \alpha = 10', LineWidth=2, ...
 		Color=red,LineStyle='--');
 
+	xlabel("X");
+	ylabel("Y");
+
     hold off;
-    legend;
+    legend(Location='northwest');
 
     saveas(gcf, "../gallery/graphical", "jpeg")
 end
