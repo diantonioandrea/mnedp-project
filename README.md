@@ -16,4 +16,5 @@ Implementazione di un metodo "Adaptive 1D 1st-order Lagrange FEM" per la soluzio
 - `/tests/*` Codici sorgente di test per la relazione.
 	- `/tests/errorTrend.m` Studio della convergenza del metodo su mesh uniformi.
 	- `/tests/comparison.m` Confronto tra il metodo adattivo e il metodo di raffinamento classico.
+	- `/tests/graphical.m` Confronto qualitativo tra la soluzione analitica e numerica.
 - `report/report.tex` Relazione.
