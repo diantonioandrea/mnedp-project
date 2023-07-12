@@ -13,4 +13,4 @@ Size: 4.882812e-04	Condition number: 1.699887e+06.
 
 Interpolation coefficients.
 
-alpha = 5/3 Interpolant: y = -2.010307x + (-0.963724)
+alpha = 5/3 Interpolant: y = -2.010307x + (-0.963724).

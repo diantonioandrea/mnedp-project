@@ -72,7 +72,7 @@ function condition
 	
 	% Prints coefficients.
 	fprintf(fileID, "\n\nInterpolation coefficients.");
-	fprintf(fileID, "\n\nalpha = 5/3 Interpolant: y = %fx + (%f)", ...
+	fprintf(fileID, "\n\nalpha = 5/3 Interpolant: y = %fx + (%f).", ...
 		coeffs(1), coeffs(2));
 
 	hold off;

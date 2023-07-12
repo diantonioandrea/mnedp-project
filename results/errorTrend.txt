@@ -26,5 +26,5 @@ Size: 4.882812e-04	Error: 8.907834e-04.
 
 Interpolation coefficients.
 
-alpha = 5/3 Interpolant: y = 0.988762x + (0.006448)
-alpha = 10 Interpolant: y = 0.964138x + (0.389059)
+alpha = 5/3 Interpolant: y = 0.988762x + (0.006448).
+alpha = 10 Interpolant: y = 0.964138x + (0.389059).
