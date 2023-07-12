@@ -9,6 +9,9 @@ function comparison
 	f_a = @(a, x) - a * (a - 1) * x.^(a - 2) + ...
 		(a + 1) * a * x.^(a - 1); % -u'' from Poisson.
 
+	% Output.
+	fileID = fopen('../results/comparison.txt','w');
+
 	% Tests.
 	steps = 10;
 	sizes = zeros(4, steps);
@@ -21,7 +24,7 @@ function comparison
 	% Test 1.
 	firstMesh = builder(5);
 
-	fprintf('Errors evaluation, alpha = 5/3.\nSimple.\n')
+	fprintf(fileID, 'Errors evaluation, alpha = 5/3.\nSimple.\n');
 	
 	j = 1;
 	[uh, ~, ~] = solver(firstMesh, f);
@@ -29,7 +32,7 @@ function comparison
 	errors(1, j) = errorEstimate(firstMesh, up, uh);
 	sizes(1, j) = length(firstMesh.elements);
 
-	fprintf('\nElements: %d\tError: %e.', ...
+	fprintf(fileID, '\nElements: %d\tError: %e.', ...
 			length(firstMesh.elements), errors(1, j));
 
 	for j = 2:steps
@@ -39,14 +42,14 @@ function comparison
 		errors(1, j) = errorEstimate(firstMesh, up, uh);
 		sizes(1, j) = length(firstMesh.elements);
 		
-		fprintf('\nElements: %d\tError: %e.', ...
+		fprintf(fileID, '\nElements: %d\tError: %e.', ...
 			length(firstMesh.elements), errors(1, j));
 	end
 	
 	% Test 2.
 	secondMesh = builder(5);
 
-	fprintf('\n\nAdaptive.\n')
+	fprintf(fileID, '\n\nAdaptive.\n');
 
 	j = 1;
 	[uh, ~, ~] = solver(secondMesh, f);
@@ -54,7 +57,7 @@ function comparison
 	errors(2, j) = errorEstimate(secondMesh, up, uh);
 	sizes(2, j) = length(secondMesh.elements);
 
-	fprintf('\nElements: %d\tError: %e.', ...
+	fprintf(fileID, '\nElements: %d\tError: %e.', ...
 			length(secondMesh.elements), errors(2, j));
 
 	for j = 2:steps
@@ -65,7 +68,7 @@ function comparison
 		errors(2, j) = errorEstimate(secondMesh, up, uh);
 		sizes(2, j) = length(secondMesh.elements);
 		
-		fprintf('\nElements: %d\tError: %e.', ...
+		fprintf(fileID, '\nElements: %d\tError: %e.', ...
 			length(secondMesh.elements), errors(2, j));
 	end
 	%% Alpha = 10.
@@ -75,7 +78,7 @@ function comparison
 	% Test 3.
 	firstMesh = builder(5);
 
-	fprintf('\n\nErrors evaluation, alpha = 10.\nSimple.\n')
+	fprintf(fileID, '\n\nErrors evaluation, alpha = 10.\nSimple.\n');
 	
 	j = 1;
 	[uh, ~, ~] = solver(firstMesh, f);
@@ -83,7 +86,7 @@ function comparison
 	errors(3, j) = errorEstimate(firstMesh, up, uh);
 	sizes(3, j) = length(firstMesh.elements);
 
-	fprintf('\nElements: %d\tError: %e.', ...
+	fprintf(fileID, '\nElements: %d\tError: %e.', ...
 			length(firstMesh.elements), errors(3, j));
 
 	for j = 2:steps
@@ -93,14 +96,14 @@ function comparison
 		errors(3, j) = errorEstimate(firstMesh, up, uh);
 		sizes(3, j) = length(firstMesh.elements);
 		
-		fprintf('\nElements: %d\tError: %e.', ...
+		fprintf(fileID, '\nElements: %d\tError: %e.', ...
 			length(firstMesh.elements), errors(3, j));
 	end
 
 	% Test 4.
 	secondMesh = builder(5);
 
-	fprintf('\n\nAdaptive.\n')
+	fprintf(fileID, '\n\nAdaptive.\n');
 
 	j = 1;
 	[uh, ~, ~] = solver(secondMesh, f);
@@ -108,7 +111,7 @@ function comparison
 	errors(4, j) = errorEstimate(secondMesh, up, uh);
 	sizes(4, j) = length(secondMesh.elements);
 
-	fprintf('\nElements: %d\tError: %e.', ...
+	fprintf(fileID, '\nElements: %d\tError: %e.', ...
 			length(secondMesh.elements), errors(4, j));
 
 	for j = 2:steps
@@ -119,7 +122,7 @@ function comparison
 		errors(4, j) = errorEstimate(secondMesh, up, uh);
 		sizes(4, j) = length(secondMesh.elements);
 		
-		fprintf('\nElements: %d\tError: %e.', ...
+		fprintf(fileID, '\nElements: %d\tError: %e.', ...
 			length(secondMesh.elements), errors(4, j));
 	end
 

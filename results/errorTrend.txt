@@ -1,0 +1,30 @@
+Errors evaluation, alpha = 5/3.
+
+Size: 2.500000e-01	Error: 2.493096e-01.
+Size: 1.250000e-01	Error: 1.287809e-01.
+Size: 6.250000e-02	Error: 6.548363e-02.
+Size: 3.125000e-02	Error: 3.307970e-02.
+Size: 1.562500e-02	Error: 1.665622e-02.
+Size: 7.812500e-03	Error: 8.370898e-03.
+Size: 3.906250e-03	Error: 4.201754e-03.
+Size: 1.953125e-03	Error: 2.107209e-03.
+Size: 9.765625e-04	Error: 1.056088e-03.
+Size: 4.882812e-04	Error: 5.290231e-04.
+
+Errors evaluation, alpha = 10.
+
+Size: 2.500000e-01	Error: 3.247849e-01.
+Size: 1.250000e-01	Error: 2.018118e-01.
+Size: 6.250000e-02	Error: 1.103291e-01.
+Size: 3.125000e-02	Error: 5.653510e-02.
+Size: 1.562500e-02	Error: 2.844530e-02.
+Size: 7.812500e-03	Error: 1.424507e-02.
+Size: 3.906250e-03	Error: 7.125345e-03.
+Size: 1.953125e-03	Error: 3.563024e-03.
+Size: 9.765625e-04	Error: 1.781556e-03.
+Size: 4.882812e-04	Error: 8.907834e-04.
+
+Interpolation coefficients.
+
+alpha = 5/3 Interpolant: y = 0.988762x + (0.006448)
+alpha = 10 Interpolant: y = 0.964138x + (0.389059)

@@ -14,6 +14,27 @@
 
 \newtheorem{theorem}{Theorem}
 
+\usepackage{courier}
+\usepackage{listings}
+
+\lstdefinestyle{default}{
+	commentstyle=\color{solarized-green},
+	keywordstyle=\color{solarized-magenta},
+	stringstyle=\color{solarized-purple},
+	basicstyle=\ttfamily\color{black},
+	breakatwhitespace=false,
+	breaklines=true,
+	captionpos=b,
+	keepspaces=true,
+	numbersep=5pt,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=2
+}
+
+\lstset{style=default}
+
 \usepackage{nameref}
 
 \usepackage{titlesec}
@@ -30,25 +51,25 @@
 
 \usepackage[a4paper]{geometry}
 \geometry{
-    inner=20mm,
-    outer=20mm,
-    top=30mm,
-    bottom=30mm,
-    heightrounded,
-    marginparwidth=50pt,
-    marginparsep=20pt,
-    headsep=25pt,
-    headheight=30pt
+	inner=20mm,
+	outer=20mm,
+	top=30mm,
+	bottom=30mm,
+	heightrounded,
+	marginparwidth=50pt,
+	marginparsep=20pt,
+	headsep=25pt,
+	headheight=30pt
 }
 
 \usepackage{hyperref}
 \hypersetup{
-    linktocpage=true,
-    colorlinks=true,
-    linkcolor=\accentcolor,
-    urlcolor=\urlcolor,
+	linktocpage=true,
+	colorlinks=true,
+	linkcolor=\accentcolor,
+	urlcolor=\urlcolor,
 	pdftitle={\reporttitle},
-    pdfpagemode=FullScreen,
+	pdfpagemode=FullScreen,
 	pdfauthor={Andrea Di Antonio}
 }
 
@@ -66,28 +87,35 @@
 \setcounter{tocdepth}{2}
 
 \begin{document}
-    \pagenumbering{roman}
+	\pagenumbering{roman}
 	\maketitle
 	\thispagestyle{fancy}
 
 	\begin{abstract}
 		\begin{center}
-            Report for the course \textit{Metodi Numerici per Equazioni alle Derivate Parziali} on the definition and costruction of an \textit{\reporttitle}\footnote{Written in MATLAB R2023b.} and a subsequent analysis which includes a comparison against a more naive approach by considering a sequence of uniformly refined meshes.
-        \end{center}
+			Report for the course \textit{Metodi Numerici per Equazioni alle Derivate Parziali} on the definition and costruction of an \textit{\reporttitle}\footnote{Written in MATLAB R2023b.} and a subsequent analysis which includes a comparison against a more naive approach by considering a sequence of uniformly refined meshes.
+		\end{center}
 	\end{abstract}
 
-    \newpage
-    \tableofcontents
+	\newpage
+	\tableofcontents
 
-    \newpage
-    \pagenumbering{arabic}
-    \section{Problem Introduction}
-    \input{sections/introduction.tex}
+	\newpage
+	\pagenumbering{arabic}
+	\section{Problem Introduction}
+	\input{sections/introduction.tex}
 
-    \newpage
-    \section{Finite Element Method}
-    \input{sections/fem.tex}
+	\newpage
+	\section{Finite Element Method}
+	\input{sections/fem.tex}
 
-    \newpage
-    \section{Adaptive Refinment Method}
+	\newpage
+	\section{Tests on Uniform Meshes}
+	\input{sections/uniform.tex}
+
+	\newpage
+	\section{Adaptive Refinment Method}
+
+	\newpage
+	\section{Comparisons}
 \end{document}

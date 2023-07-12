@@ -1,0 +1,16 @@
+Condition number evaluation, alpha = 5/3.
+
+Size: 2.500000e-01	Condition number: 5.828427e+00.
+Size: 1.250000e-01	Condition number: 2.527414e+01.
+Size: 6.250000e-02	Condition number: 1.030869e+02.
+Size: 3.125000e-02	Condition number: 4.143451e+02.
+Size: 1.562500e-02	Condition number: 1.659380e+03.
+Size: 7.812500e-03	Condition number: 6.639518e+03.
+Size: 3.906250e-03	Condition number: 2.656007e+04.
+Size: 1.953125e-03	Condition number: 1.062423e+05.
+Size: 9.765625e-04	Condition number: 4.249712e+05.
+Size: 4.882812e-04	Condition number: 1.699887e+06.
+
+Interpolation coefficients.
+
+alpha = 5/3 Interpolant: y = -2.010307x + (-0.963724)

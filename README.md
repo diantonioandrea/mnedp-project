@@ -14,7 +14,8 @@ Implementazione di un metodo "Adaptive 1D 1st-order Lagrange FEM" per la soluzio
 	- `/src/refiner.m` Raffinatore della mesh.
 	- `/src/solver.m` Risolutore del prolema di Poisson sulla mesh.
 - `/tests/*` Codici sorgente di test per la relazione.
-	- `/tests/errorTrend.m` Studio della convergenza del metodo su mesh uniformi.
-	- `/tests/comparison.m` Confronto tra il metodo adattivo e il metodo di raffinamento classico.
 	- `/tests/graphical.m` Confronto qualitativo tra la soluzione analitica e numerica.
+	- `/tests/errorTrend.m` Studio della convergenza del metodo su mesh uniformi.
+	- `/tests/condition.m` Studio dell'andamento del numero di condizionamento della matrice A.
+	- `/tests/comparison.m` Confronto tra il metodo adattivo e il metodo di raffinamento classico.
 - `report/report.tex` Relazione.

@@ -9,12 +9,15 @@ function errorTrend
 	f_a = @(a, x) - a * (a - 1) * x.^(a - 2) + ...
 		(a + 1) * a * x.^(a - 1); % -u'' from Poisson.
 
+	% Output.
+	fileID = fopen('../results/errorTrend.txt','w');
+
 	% Tests.
 	steps = 10;
 	sizes = zeros(2, steps);
 	errors = zeros(2, steps);
 
-	%% \alpha = 5/3.
+	%% alpha = 5/3.
 	up = @(x) up_a(5/3, x);
 	f = @(x) f_a(5/3, x);
 	
@@ -22,16 +25,16 @@ function errorTrend
 	uMesh = builder(5);
 	meshSizes = diff(uMesh.nodes);
 
-	fprintf('Errors evaluation, \alpha = 5/3.\nSimple.\n')
+	fprintf(fileID, 'Errors evaluation, alpha = 5/3.\n');
 
 	j = 1;
 	[uh, ~, ~] = solver(uMesh, f);
 
 	errors(1, j) = errorEstimate(uMesh, up, uh);
-	sizes(1, j) = max(meshSizes); % length(uMesh.elements);
+	sizes(1, j) = max(meshSizes);
 
-	fprintf('\nElements: %d\tError: %e.', ...
-			length(uMesh.elements), errors(1, j));
+	fprintf(fileID, '\nSize: %d\tError: %e.', ...
+			sizes(1, j), errors(1, j));
 
 	for j = 2:steps
 		uMesh = refiner(uMesh, []);
@@ -39,13 +42,13 @@ function errorTrend
 		[uh, ~, ~] = solver(uMesh, f);
 
 		errors(1, j) = errorEstimate(uMesh, up, uh);
-		sizes(1, j) = max(meshSizes); % length(uMesh.elements);
+		sizes(1, j) = max(meshSizes);
 		
-		fprintf('\nElements: %d\tError: %e.', ...
-			length(uMesh.elements), errors(1, j));
+		fprintf(fileID, '\nSize: %d\tError: %e.', ...
+			sizes(1, j), errors(1, j));
 	end
 
-	%% \alpha = 10.
+	%% alpha = 10.
 	up = @(x) up_a(10, x);
 	f = @(x) f_a(10, x);
 	
@@ -53,16 +56,16 @@ function errorTrend
 	uMesh = builder(5);
 	meshSizes = diff(uMesh.nodes);
 
-	fprintf('\n\nErrors evaluation, \alpha = 10.\nSimple.\n')
+	fprintf(fileID, '\n\nErrors evaluation, alpha = 10.\n');
 	
 	j = 1;
 	[uh, ~, ~] = solver(uMesh, f);
 	
 	errors(2, j) = errorEstimate(uMesh, up, uh);
-	sizes(2, j) = max(meshSizes); % length(uMesh.elements);
+	sizes(2, j) = max(meshSizes);
 
-	fprintf('\nElements: %d\tError: %e.', ...
-			length(uMesh.elements), errors(2, j));
+	fprintf(fileID, '\nSize: %d\tError: %e.', ...
+			sizes(2, j), errors(2, j));
 
 	for j = 2:steps
 		uMesh = refiner(uMesh, []);
@@ -70,10 +73,10 @@ function errorTrend
 		[uh, ~, ~] = solver(uMesh, f);
 		
 		errors(2, j) = errorEstimate(uMesh, up, uh);
-		sizes(2, j) = max(meshSizes); % length(uMesh.elements);
+		sizes(2, j) = max(meshSizes);
 		
-		fprintf('\nElements: %d\tError: %e.', ...
-			length(uMesh.elements), errors(2, j));
+		fprintf(fileID, '\nSize: %d\tError: %e.', ...
+			sizes(2, j), errors(2, j));
 	end
 
 	%% Graphics.
@@ -111,10 +114,10 @@ function errorTrend
 		LineStyle=":", DisplayName="\alpha = 10 Interpolant.");
 	
 	% Prints coefficients.
-	fprintf("\n\nInterpolation coefficients.")
-	fprintf("\n\nalpha = 5/3 Interpolant: y = %fx + (%f)", ...
+	fprintf(fileID, "\n\nInterpolation coefficients.");
+	fprintf(fileID, "\n\nalpha = 5/3 Interpolant: y = %fx + (%f)", ...
 		coeffs(1, 1), coeffs(1, 2));
-	fprintf("\nalpha = 10 Interpolant: y = %fx + (%f)\n", ...
+	fprintf(fileID, "\nalpha = 10 Interpolant: y = %fx + (%f)\n", ...
 		coeffs(2, 1), coeffs(2, 2));
 
 	hold off;
