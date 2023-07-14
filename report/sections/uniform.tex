@@ -48,12 +48,14 @@ we have:
 \lstinputlisting{../results/errorTrend.txt}
 
 \newpage
-\subsection{Condition Number for the Stiffness Matrix}
+\subsection{Stiffness Matrix Conditioning}
 
-We want to investigate here the relation between the mesh size and the stiffness matrix's condtion number, expressed as it follows:
+We want to investigate here the relation between the mesh size and the stiffness matrix' condtion number, expressed as it follows:
 \begin{gather}
 	\chi(\underline{\underline{A}}) \approx h^{-2}.
 \end{gather}
+
+The test is pretty straightforward as it requires to just evaluate the stiffness matrix for different meshes varying just the mesh size.
 
 \begin{figure}[!ht]
 	\centering

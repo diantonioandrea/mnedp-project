@@ -5,7 +5,6 @@ function comparisonCond
 	addpath('../src')
 
 	% Functions.
-	up_a = @(a, x) a * x.^(a - 1) - (a + 1) * x.^a; % u';
 	f_a = @(a, x) - a * (a - 1) * x.^(a - 2) + ...
 		(a + 1) * a * x.^(a - 1); % -u'' from Poisson.
 
@@ -14,36 +13,35 @@ function comparisonCond
 
 	% Tests.
 	steps = 10;
+	sizes = zeros(4, steps);
 	conds = zeros(4, steps);
-	errors = zeros(4, steps);
 
 	%% Alpha = 5/3.
-	up = @(x) up_a(5/3, x);
 	f = @(x) f_a(5/3, x);
 	
 	% Test 1.
 	firstMesh = builder(5);
 
-	fprintf(fileID, 'Errors evaluation, alpha = 5/3.\nSimple.\n');
+	fprintf(fileID, 'Condition number, alpha = 5/3.\nSimple.\n');
 	
 	j = 1;
-	[uh, A, ~] = solver(firstMesh, f);
+	[~, A, ~] = solver(firstMesh, f);
 
-	errors(1, j) = errorEstimate(firstMesh, up, uh);
+	sizes(1, j) = length(firstMesh.elements);
 	conds(1, j) = cond(A);
 
-	fprintf(fileID, '\nCondition number: %d\tError: %e.', ...
-			conds(1, j), errors(1, j));
+	fprintf(fileID, '\nElements: %d\tCondition Number: %e.', ...
+			sizes(1, j), conds(1, j));
 
 	for j = 2:steps
 		firstMesh = refiner(firstMesh, []);
-		[uh, A, ~] = solver(firstMesh, f);
+		[~, A, ~] = solver(firstMesh, f);
 
-		errors(1, j) = errorEstimate(firstMesh, up, uh);
+		sizes(1, j) = length(firstMesh.elements);
 		conds(1, j) = cond(A);
 		
-		fprintf(fileID, '\nCondition number: %d\tError: %e.', ...
-			conds(1, j), errors(1, j));
+		fprintf(fileID, '\nElements: %d\tCondition Number: %e.', ...
+			sizes(1, j), conds(1, j));
 	end
 	
 	% Test 2.
@@ -52,52 +50,51 @@ function comparisonCond
 	fprintf(fileID, '\n\nAdaptive.\n');
 
 	j = 1;
-	[uh, A, ~] = solver(secondMesh, f);
+	[~, A, ~] = solver(secondMesh, f);
 
-	errors(2, j) = errorEstimate(secondMesh, up, uh);
+	sizes(2, j) = length(secondMesh.elements);
 	conds(2, j) = cond(A);
 
-	fprintf(fileID, '\nCondition number: %d\tError: %e.', ...
-			conds(2, j), errors(2, j));
+	fprintf(fileID, '\nElements: %d\tCondition Number: %e.', ...
+			sizes(2, j), conds(2, j));
 
 	for j = 2:steps
 		marked = marker(secondMesh, f);
 		secondMesh = refiner(secondMesh, marked);
-		[uh, A, ~] = solver(secondMesh, f);
+		[~, A, ~] = solver(secondMesh, f);
 
-		errors(2, j) = errorEstimate(secondMesh, up, uh);
+		sizes(2, j) = length(secondMesh.elements);
 		conds(2, j) = cond(A);
 		
-		fprintf(fileID, '\nCondition number: %d\tError: %e.', ...
-			conds(2, j), errors(2, j));
+		fprintf(fileID, '\nElements: %d\tCondition Number: %e.', ...
+			sizes(2, j), conds(2, j));
 	end
 	%% Alpha = 10.
-	up = @(x) up_a(10, x);
 	f = @(x) f_a(10, x);
 	
 	% Test 3.
 	firstMesh = builder(5);
 
-	fprintf(fileID, '\n\nErrors evaluation, alpha = 10.\nSimple.\n');
+	fprintf(fileID, '\n\nCondition number, alpha = 10.\nSimple.\n');
 	
 	j = 1;
-	[uh, A, ~] = solver(firstMesh, f);
+	[~, A, ~] = solver(firstMesh, f);
 	
-	errors(3, j) = errorEstimate(firstMesh, up, uh);
+	sizes(3, j) = length(firstMesh.elements);
 	conds(3, j) = cond(A);
 
-	fprintf(fileID, '\nCondition number: %d\tError: %e.', ...
-			conds(3, j), errors(3, j));
+	fprintf(fileID, '\nElements: %d\tCondition Number: %e.', ...
+			sizes(3, j), conds(3, j));
 
 	for j = 2:steps
 		firstMesh = refiner(firstMesh, []);
-		[uh, A, ~] = solver(firstMesh, f);
+		[~, A, ~] = solver(firstMesh, f);
 		
-		errors(3, j) = errorEstimate(firstMesh, up, uh);
+		sizes(3, j) = length(firstMesh.elements);
 		conds(3, j) = cond(A);
 		
-		fprintf(fileID, '\nCondition number: %d\tError: %e.', ...
-			conds(3, j), errors(3, j));
+		fprintf(fileID, '\nElements: %d\tCondition Number: %e.', ...
+			sizes(3, j), conds(3, j));
 	end
 
 	% Test 4.
@@ -106,24 +103,24 @@ function comparisonCond
 	fprintf(fileID, '\n\nAdaptive.\n');
 
 	j = 1;
-	[uh, A, ~] = solver(secondMesh, f);
+	[~, A, ~] = solver(secondMesh, f);
 	
-	errors(4, j) = errorEstimate(secondMesh, up, uh);
+	sizes(4, j) = length(secondMesh.elements);
 	conds(4, j) = cond(A);
 
-	fprintf(fileID, '\nCondition number: %d\tError: %e.', ...
-			conds(4, j), errors(4, j));
+	fprintf(fileID, '\nElements: %d\tCondition Number: %e.', ...
+			sizes(4, j), conds(4, j));
 
 	for j = 2:steps
 		marked = marker(secondMesh, f);
 		secondMesh = refiner(secondMesh, marked);
-		[uh, A, ~] = solver(secondMesh, f);
+		[~, A, ~] = solver(secondMesh, f);
 		
-		errors(4, j) = errorEstimate(secondMesh, up, uh);
+		sizes(4, j) = length(secondMesh.elements);
 		conds(4, j) = cond(A);
 		
-		fprintf(fileID, '\nCondition number: %d\tError: %e.', ...
-			conds(4, j), errors(4, j));
+		fprintf(fileID, '\nElements: %d\tCondition Number: %e.', ...
+			sizes(4, j), conds(4, j));
 	end
 
 	%% Graphics.
@@ -135,54 +132,37 @@ function comparisonCond
 
 	% Alpha = 5/3.
 	nexttile;
-	loglog(conds(1, :), errors(1, :), ...
+	loglog(sizes(1, :), conds(1, :), ...
 		DisplayName='Simple, \alpha = 5/3.', LineWidth=2, ...
 		Color=red);
 	hold on;
 
-	loglog(conds(2, :), errors(2, :), ...
+	loglog(sizes(2, :), conds(2, :), ...
 		DisplayName='Adaptive, \alpha = 5/3.', LineWidth=2, ...
 		Color=green);
 
-	xlabel("Condition number");
-	ylabel("|u - u_h|_{1, \Omega}");
+	xlabel("Number of elements");
+	ylabel("\chi(A)");
 
 	hold off;
 	legend;
 	
 	% Alpha = 10.
 	nexttile;
-	loglog(conds(3, :), errors(3, :), ...
+	loglog(sizes(3, :), conds(3, :), ...
 		DisplayName='Simple, \alpha = 10.', LineWidth=2, ...
 		Color=red);
 	hold on;
 
-	loglog(conds(4, :), errors(4, :), ...
+	loglog(sizes(4, :), conds(4, :), ...
 		DisplayName='Adaptive, \alpha = 10.', LineWidth=2, ...
 		Color=green);
 
-	xlabel("Condition number");
-	ylabel("|u - u_h|_{1, \Omega}");
+	xlabel("Number of elements");
+	ylabel("\chi(A)");
 
 	hold off;
 	legend;
 
 	saveas(gcf, "../gallery/comparisonCond", "jpeg")
-end
-
-function err = errorEstimate(mesh, up, uh)
-	err = 0;
-
-	for j = 1:length(mesh.nodes) - 1
-		h = mesh.elements(j, 3);
-		xs = mesh.nodes(j);
-		xd = mesh.nodes(j + 1);
-
-		gh = (uh(j + 1) - uh(j)) / h;
-
-		err = err + .5 * h * ((up(xs) - gh)^2 + ...
-			(up(xd) - gh)^2);
-	end
-
-	err = sqrt(err);
 end

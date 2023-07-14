@@ -96,7 +96,7 @@ function errorTrend
 		Color=green);
 	
 	xlabel("Mesh Size (h)");
-	ylabel("Error");
+	ylabel("|u - u_h|_{1, \Omega}");
 
 	% Interpolation
 
@@ -114,14 +114,14 @@ function errorTrend
 		LineStyle=":", DisplayName="\alpha = 10 Interpolant.");
 	
 	% Prints coefficients.
-	fprintf(fileID, "\n\nInterpolation coefficients.");
+	fprintf(fileID, "\n\nLoglog interpolation.");
 	fprintf(fileID, "\n\nalpha = 5/3 Interpolant: y = %fx + (%f).", ...
 		coeffs(1, 1), coeffs(1, 2));
 	fprintf(fileID, "\nalpha = 10 Interpolant: y = %fx + (%f).\n", ...
 		coeffs(2, 1), coeffs(2, 2));
 
 	hold off;
-	legend;
+	legend(location='northwest');
 
 	saveas(gcf, "../gallery/errorTrend", "jpeg")
 end

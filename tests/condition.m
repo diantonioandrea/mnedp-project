@@ -58,7 +58,7 @@ function condition
 	hold on;
 	
 	xlabel("Mesh Size (h)");
-	ylabel("Condition number")
+	ylabel("\chi(A)");
 
 	% Interpolation
 
@@ -71,7 +71,7 @@ function condition
 		LineStyle=":", DisplayName="\alpha = 5/3 Interpolant.");
 	
 	% Prints coefficients.
-	fprintf(fileID, "\n\nInterpolation coefficients.");
+	fprintf(fileID, "\n\nLoglog interpolation.");
 	fprintf(fileID, "\n\nalpha = 5/3 Interpolant: y = %fx + (%f).", ...
 		coeffs(1), coeffs(2));
 

@@ -11,6 +11,6 @@ Size: 1.953125e-03	Condition number: 1.062423e+05.
 Size: 9.765625e-04	Condition number: 4.249712e+05.
 Size: 4.882812e-04	Condition number: 1.699887e+06.
 
-Interpolation coefficients.
+Loglog interpolation.
 
 alpha = 5/3 Interpolant: y = -2.010307x + (-0.963724).
