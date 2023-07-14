@@ -13,22 +13,22 @@ Here it follows a simple and qualitative comparison between the analytical and n
 Given what we've said on \nameref{sob_regularity}, and by the following corollary to the \textit{Deny-Lions' Lemma}:
 
 \begin{theorem}[Deny-Lions' corollary]
-	Let $u, u_h$ be the solution respectively to the weak formulation of a Poisson problem and its associated order k Lagrangian FEM with shape-regular and quasi-uniform mesh $T_h$. \\ 
+	Let $u, u_h$ be the solution respectively to the weak formulation of a Poisson problem and its associated order k Lagrangian FEM with shape-regular and quasi-uniform mesh $\Tau_h$. \\ 
 	If $u \in H^s(\Omega)$, then $\exists C$ such that:
 	\begin{gather}
-		|u - u_h|_{1, \Omega} \le C (\max_{K \in T_h} h_K)^{p}|u|_{s+1, \Omega},
+		|u - u_h|_{1, \Omega} \le C (\max_{K \in \Tau_h} h_K)^{p}|u|_{s+1, \Omega},
 	\end{gather}
 	with $p = \min(s, k)$.
 \end{theorem}
 
 Having defined a 1st-order Lagrangian FEM, we have for both values of $\alpha$ that $p = 1$, so that\footnote{The value of $s$ depends on the value of $\alpha$. We can always choose $s > k$.}:
 \begin{gather}
-	|u - u_h|_{1, \Omega} \le C (\max_{K \in T_h} h_K)|u|_{s+1, \Omega}.
+	|u - u_h|_{1, \Omega} \le C (\max_{K \in \Tau_h} h_K)|u|_{s+1, \Omega}.
 \end{gather}
 
 By\footnote{For an appropriate choice of $s$.}:
 \begin{gather}
-	\max_{K \in T_h} h_K = h, \\
+	\max_{K \in \Tau_h} h_K = h, \\
 	|u|_{s+1, \Omega} < +\infty,
 \end{gather}
 we have:
