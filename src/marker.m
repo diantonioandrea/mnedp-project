@@ -2,51 +2,14 @@
 % Returns the marked elements of a mesh by evaluating the error
 % estimator on every element and picking the 25% highest values.
 function marked = marker(mesh, f, percentage)
-	narginchk(2, 3);
+narginchk(2, 3);
 	if nargin <= 2 || isempty(precentage); percentage = 25; end
 	if nargin == 3
 		if percentage <= 0 || percentage > 100
-			error('Wrong percentage');
+			error('wrong percentage');
 		end
 	end
 
-	[uh, ~, ~] = solver(mesh, f);
-	els = length(mesh.elements);
-	estimates = zeros(1, els);
-
-	for j = 1:els
-		h = mesh.elements(j, 3);
-		xs = mesh.nodes(j);
-		xd = mesh.nodes(j + 1);
-
-		% Integral estimate.
-		% uh'' = 0.
-		estimates(j) = .5 * (f(xs)^2 + ...
-			f(xd)^2) * h^3;
-
-		% gradJump estimate.
-		estimates(j) = estimates(j) + .5 * h * ...
-			(absGradJump(mesh, uh, xs) + ...
-			absGradJump(mesh, uh, xd));
-	end
-
-	estimates = sqrt(estimates);
+	[estimates, ~] = estimate(mesh, f);
 	marked = estimates >= prctile(estimates, 100 - percentage);
-end
-
-function jump = gradJump(mesh, uh, x)
-	if x <= mesh.a || x >= mesh.b; jump = 0; return; end
-	ind = find(mesh.nodes == x);
-
-	hs = mesh.elements(ind - 1, 3);
-	hd = mesh.elements(ind, 3);
-
-	gs = (uh(ind) - uh(ind - 1)) / hs;
-	gd = (uh(ind + 1) - uh(ind)) / hd;
-
-	jump = gs - gd;
-end
-
-function jump = absGradJump(mesh, uh, x)
-	jump = abs(gradJump(mesh, uh, x));
 end

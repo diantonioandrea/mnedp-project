@@ -15,15 +15,15 @@ Elements: 2048	Error: 5.290231e-04.
 Adaptive.
 
 Elements: 4	Error: 2.493096e-01.
-Elements: 5	Error: 2.327644e-01.
-Elements: 6	Error: 2.266713e-01.
-Elements: 8	Error: 1.611187e-01.
-Elements: 10	Error: 1.213041e-01.
-Elements: 13	Error: 1.020971e-01.
-Elements: 16	Error: 7.119629e-02.
-Elements: 20	Error: 5.634364e-02.
-Elements: 25	Error: 4.549836e-02.
-Elements: 31	Error: 3.357480e-02.
+Elements: 5	Error: 2.254791e-01.
+Elements: 6	Error: 1.612634e-01.
+Elements: 8	Error: 1.467743e-01.
+Elements: 10	Error: 1.265542e-01.
+Elements: 13	Error: 8.423886e-02.
+Elements: 16	Error: 6.065668e-02.
+Elements: 20	Error: 5.272425e-02.
+Elements: 25	Error: 3.625589e-02.
+Elements: 31	Error: 3.134000e-02.
 
 Errors evaluation, alpha = 10.
 Simple.
@@ -45,9 +45,9 @@ Elements: 4	Error: 3.247849e-01.
 Elements: 5	Error: 2.029082e-01.
 Elements: 6	Error: 1.147418e-01.
 Elements: 8	Error: 6.526698e-02.
-Elements: 10	Error: 4.599753e-02.
+Elements: 10	Error: 5.497372e-02.
 Elements: 13	Error: 3.518341e-02.
 Elements: 16	Error: 2.919550e-02.
-Elements: 20	Error: 2.086009e-02.
-Elements: 25	Error: 1.695711e-02.
+Elements: 20	Error: 2.529025e-02.
+Elements: 25	Error: 1.713033e-02.
 Elements: 31	Error: 1.412667e-02.

@@ -10,6 +10,7 @@ Implementazione di un metodo "Adaptive 1D 1st-order Lagrange FEM" per la soluzio
 
 - `/src/*` Codice sorgente per il FEM.
 	- `/src/builder.m` Costruttore della mesh.
+	- `/src/estimate.m` Stimatore dell'errore.
 	- `/src/marker.m` Marcatore della mesh.
 	- `/src/refiner.m` Raffinatore della mesh.
 	- `/src/solver.m` Risolutore del prolema di Poisson sulla mesh.

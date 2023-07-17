@@ -15,15 +15,15 @@ Elements: 2048	Condition Number: 1.699887e+06.
 Adaptive.
 
 Elements: 4	Condition Number: 5.828427e+00.
-Elements: 5	Condition Number: 1.044449e+01.
-Elements: 6	Condition Number: 2.132872e+01.
-Elements: 8	Condition Number: 4.550010e+01.
-Elements: 10	Condition Number: 1.219125e+02.
-Elements: 13	Condition Number: 3.258645e+02.
-Elements: 16	Condition Number: 7.726856e+02.
-Elements: 20	Condition Number: 2.120765e+03.
-Elements: 25	Condition Number: 5.685014e+03.
-Elements: 31	Condition Number: 1.396564e+04.
+Elements: 5	Condition Number: 1.558790e+01.
+Elements: 6	Condition Number: 1.832202e+01.
+Elements: 8	Condition Number: 5.302295e+01.
+Elements: 10	Condition Number: 6.291200e+01.
+Elements: 13	Condition Number: 8.994345e+01.
+Elements: 16	Condition Number: 1.784299e+02.
+Elements: 20	Condition Number: 2.726406e+02.
+Elements: 25	Condition Number: 3.058039e+02.
+Elements: 31	Condition Number: 7.143162e+02.
 
 Condition number, alpha = 10.
 Simple.
@@ -45,9 +45,9 @@ Elements: 4	Condition Number: 5.828427e+00.
 Elements: 5	Condition Number: 1.044449e+01.
 Elements: 6	Condition Number: 2.132872e+01.
 Elements: 8	Condition Number: 5.751892e+01.
-Elements: 10	Condition Number: 1.241403e+02.
+Elements: 10	Condition Number: 1.420726e+02.
 Elements: 13	Condition Number: 2.196009e+02.
 Elements: 16	Condition Number: 4.825782e+02.
-Elements: 20	Condition Number: 6.325668e+02.
-Elements: 25	Condition Number: 9.115371e+02.
+Elements: 20	Condition Number: 6.892386e+02.
+Elements: 25	Condition Number: 9.419675e+02.
 Elements: 31	Condition Number: 2.068658e+03.
