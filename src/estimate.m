@@ -1,4 +1,5 @@
 % Andrea Di Antonio, 858798.
+% Evaluates the error estimator.
 function [estimates, estimator] = estimate(mesh, f)
 	[uh, ~, ~] = solver(mesh, f);
 	els = length(mesh.elements);
@@ -9,8 +10,9 @@ function [estimates, estimator] = estimate(mesh, f)
 		xs = mesh.nodes(j);
 		xd = mesh.nodes(j + 1);
 
-		% Integral estimate using midpoint.
+		% Integral estimate.
 		% uh'' = 0.
+		% Uses midpoint.
 		estimates(j) = .5 * f((xs + xd) / 2)^2 * h^3;
 
 		% gradJump estimate.

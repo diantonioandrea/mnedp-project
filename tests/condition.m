@@ -31,7 +31,7 @@ function condition
 	conds(j) = cond(A);
 	sizes(j) = max(meshSizes);
 
-	fprintf(fileID, '\nSize: %d\tCondition number: %e.', ...
+	fprintf(fileID, '\nSize: %d\tCondition number: %.2e.', ...
 			sizes(j), conds(j));
 
 	for j = 2:steps
@@ -42,7 +42,7 @@ function condition
 		conds(j) = cond(A);
 		sizes(j) = max(meshSizes);
 		
-		fprintf(fileID, '\nSize: %d\tCondition number: %e.', ...
+		fprintf(fileID, '\nSize: %d\tCondition number: %.2e.', ...
 			sizes(j), conds(j));
 	end
 

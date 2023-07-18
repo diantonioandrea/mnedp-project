@@ -1,0 +1,30 @@
+\subsection{Error}
+
+Let's now compare the $|u - u_h|_{1, \Omega}$ error between a sequence of uniformly refined meshes and the just defined adaptive method.
+
+Due to the absence of a mesh size concept on the adaptive refined meshes, the errors get compared against the number of elements.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=15cm]{comparison.jpg}
+	\caption{Comparison between errors against number of elements.}
+\end{figure}
+
+\newpage
+\begin{multicols}{2}
+	\lstinputlisting{../results/comparison.txt}
+\end{multicols}
+
+\newpage
+\subsection{Stiffness Matrix Conditioning}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=15cm]{comparisonCond.jpg}
+	\caption{Comparison between stiffness matrix conditioning against number of elements.}
+\end{figure}
+
+\newpage
+\begin{multicols}{2}
+	\lstinputlisting{../results/comparisonCond.txt}
+\end{multicols}

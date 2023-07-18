@@ -32,7 +32,7 @@ function comparison
 	errors(1, j) = errorEstimate(firstMesh, up, uh);
 	sizes(1, j) = length(firstMesh.elements);
 
-	fprintf(fileID, '\nElements: %d\tError: %e.', ...
+	fprintf(fileID, '\nElements: %d\tError: %.2e.', ...
 			length(firstMesh.elements), errors(1, j));
 
 	for j = 2:steps
@@ -42,7 +42,7 @@ function comparison
 		errors(1, j) = errorEstimate(firstMesh, up, uh);
 		sizes(1, j) = length(firstMesh.elements);
 		
-		fprintf(fileID, '\nElements: %d\tError: %e.', ...
+		fprintf(fileID, '\nElements: %d\tError: %.2e.', ...
 			length(firstMesh.elements), errors(1, j));
 	end
 	
@@ -57,7 +57,7 @@ function comparison
 	errors(2, j) = errorEstimate(secondMesh, up, uh);
 	sizes(2, j) = length(secondMesh.elements);
 
-	fprintf(fileID, '\nElements: %d\tError: %e.', ...
+	fprintf(fileID, '\nElements: %d\tError: %.2e.', ...
 			length(secondMesh.elements), errors(2, j));
 
 	for j = 2:steps
@@ -68,7 +68,7 @@ function comparison
 		errors(2, j) = errorEstimate(secondMesh, up, uh);
 		sizes(2, j) = length(secondMesh.elements);
 		
-		fprintf(fileID, '\nElements: %d\tError: %e.', ...
+		fprintf(fileID, '\nElements: %d\tError: %.2e.', ...
 			length(secondMesh.elements), errors(2, j));
 	end
 	%% Alpha = 10.
@@ -86,7 +86,7 @@ function comparison
 	errors(3, j) = errorEstimate(firstMesh, up, uh);
 	sizes(3, j) = length(firstMesh.elements);
 
-	fprintf(fileID, '\nElements: %d\tError: %e.', ...
+	fprintf(fileID, '\nElements: %d\tError: %.2e.', ...
 			length(firstMesh.elements), errors(3, j));
 
 	for j = 2:steps
@@ -96,7 +96,7 @@ function comparison
 		errors(3, j) = errorEstimate(firstMesh, up, uh);
 		sizes(3, j) = length(firstMesh.elements);
 		
-		fprintf(fileID, '\nElements: %d\tError: %e.', ...
+		fprintf(fileID, '\nElements: %d\tError: %.2e.', ...
 			length(firstMesh.elements), errors(3, j));
 	end
 
@@ -111,7 +111,7 @@ function comparison
 	errors(4, j) = errorEstimate(secondMesh, up, uh);
 	sizes(4, j) = length(secondMesh.elements);
 
-	fprintf(fileID, '\nElements: %d\tError: %e.', ...
+	fprintf(fileID, '\nElements: %d\tError: %.2e.', ...
 			length(secondMesh.elements), errors(4, j));
 
 	for j = 2:steps
@@ -122,7 +122,7 @@ function comparison
 		errors(4, j) = errorEstimate(secondMesh, up, uh);
 		sizes(4, j) = length(secondMesh.elements);
 		
-		fprintf(fileID, '\nElements: %d\tError: %e.', ...
+		fprintf(fileID, '\nElements: %d\tError: %.2e.', ...
 			length(secondMesh.elements), errors(4, j));
 	end
 
@@ -168,21 +168,4 @@ function comparison
 	legend;
 
 	saveas(gcf, "../gallery/comparison", "jpeg")
-end
-
-function err = errorEstimate(mesh, up, uh)
-	err = 0;
-
-	for j = 1:length(mesh.nodes) - 1
-		h = mesh.elements(j, 3);
-		xs = mesh.nodes(j);
-		xd = mesh.nodes(j + 1);
-
-		gh = (uh(j + 1) - uh(j)) / h;
-
-		err = err + .5 * h * ((up(xs) - gh)^2 + ...
-			(up(xd) - gh)^2);
-	end
-
-	err = sqrt(err);
 end

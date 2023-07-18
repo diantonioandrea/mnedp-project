@@ -22,3 +22,29 @@ The algorithm should be summarized in the following way:
 	\item[Refine] Refine the marked elements.  
 	\item[Repeat] Repeat the algorithm an arbitrary number of times. 
 \end{description}
+
+\newpage
+\subsection{Reliability}
+
+Let's test the results given by the following theorem on a sequence of uniformly refined mesh. This'll let us test the reliability of the error estimator $\eta$.
+
+\begin{theorem}[Reliability]
+	Let $u \in H_0^1(\Omega)$ solution to the Poisson problem and $u_h$ solution to the Lagrangian FEM with a shape regular and quasi-uniform mesh $\Tau_h$. \\
+	Then $\exists C$\footnote{$C$ depends only on the mesh $\Tau_h$.} such that:
+	\begin{gather}
+		\lvert u - u_h \rvert_{1, \Omega} \leq C \eta,
+	\end{gather}
+	where:
+	\begin{gather}
+		\eta^2 = \sum_{K \in \Tau_h} \eta_K^2.
+	\end{gather}
+\end{theorem}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=15cm]{reliability.jpg}
+	\caption{Comparison between errors and estimator against mesh size.}
+\end{figure}
+
+\newpage
+\lstinputlisting{../results/reliability.txt}

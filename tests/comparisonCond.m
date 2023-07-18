@@ -30,7 +30,7 @@ function comparisonCond
 	sizes(1, j) = length(firstMesh.elements);
 	conds(1, j) = cond(A);
 
-	fprintf(fileID, '\nElements: %d\tCondition Number: %e.', ...
+	fprintf(fileID, '\nElements: %d\tCond.: %.2e.', ...
 			sizes(1, j), conds(1, j));
 
 	for j = 2:steps
@@ -40,7 +40,7 @@ function comparisonCond
 		sizes(1, j) = length(firstMesh.elements);
 		conds(1, j) = cond(A);
 		
-		fprintf(fileID, '\nElements: %d\tCondition Number: %e.', ...
+		fprintf(fileID, '\nElements: %d\tCond.: %.2e.', ...
 			sizes(1, j), conds(1, j));
 	end
 	
@@ -55,7 +55,7 @@ function comparisonCond
 	sizes(2, j) = length(secondMesh.elements);
 	conds(2, j) = cond(A);
 
-	fprintf(fileID, '\nElements: %d\tCondition Number: %e.', ...
+	fprintf(fileID, '\nElements: %d\tCond.: %.2e.', ...
 			sizes(2, j), conds(2, j));
 
 	for j = 2:steps
@@ -66,7 +66,7 @@ function comparisonCond
 		sizes(2, j) = length(secondMesh.elements);
 		conds(2, j) = cond(A);
 		
-		fprintf(fileID, '\nElements: %d\tCondition Number: %e.', ...
+		fprintf(fileID, '\nElements: %d\tCond.: %.2e.', ...
 			sizes(2, j), conds(2, j));
 	end
 	%% Alpha = 10.
@@ -83,7 +83,7 @@ function comparisonCond
 	sizes(3, j) = length(firstMesh.elements);
 	conds(3, j) = cond(A);
 
-	fprintf(fileID, '\nElements: %d\tCondition Number: %e.', ...
+	fprintf(fileID, '\nElements: %d\tCond.: %.2e.', ...
 			sizes(3, j), conds(3, j));
 
 	for j = 2:steps
@@ -93,7 +93,7 @@ function comparisonCond
 		sizes(3, j) = length(firstMesh.elements);
 		conds(3, j) = cond(A);
 		
-		fprintf(fileID, '\nElements: %d\tCondition Number: %e.', ...
+		fprintf(fileID, '\nElements: %d\tCond.: %.2e.', ...
 			sizes(3, j), conds(3, j));
 	end
 
@@ -108,7 +108,7 @@ function comparisonCond
 	sizes(4, j) = length(secondMesh.elements);
 	conds(4, j) = cond(A);
 
-	fprintf(fileID, '\nElements: %d\tCondition Number: %e.', ...
+	fprintf(fileID, '\nElements: %d\tCond.: %.2e.', ...
 			sizes(4, j), conds(4, j));
 
 	for j = 2:steps
@@ -119,7 +119,7 @@ function comparisonCond
 		sizes(4, j) = length(secondMesh.elements);
 		conds(4, j) = cond(A);
 		
-		fprintf(fileID, '\nElements: %d\tCondition Number: %e.', ...
+		fprintf(fileID, '\nElements: %d\tCond.: %.2e.', ...
 			sizes(4, j), conds(4, j));
 	end
 

@@ -33,7 +33,7 @@ function errorTrend
 	errors(1, j) = errorEstimate(uMesh, up, uh);
 	sizes(1, j) = max(meshSizes);
 
-	fprintf(fileID, '\nSize: %d\tError: %e.', ...
+	fprintf(fileID, '\nSize: %d\tError: %.2e.', ...
 			sizes(1, j), errors(1, j));
 
 	for j = 2:steps
@@ -44,7 +44,7 @@ function errorTrend
 		errors(1, j) = errorEstimate(uMesh, up, uh);
 		sizes(1, j) = max(meshSizes);
 		
-		fprintf(fileID, '\nSize: %d\tError: %e.', ...
+		fprintf(fileID, '\nSize: %d\tError: %.2e.', ...
 			sizes(1, j), errors(1, j));
 	end
 
@@ -64,7 +64,7 @@ function errorTrend
 	errors(2, j) = errorEstimate(uMesh, up, uh);
 	sizes(2, j) = max(meshSizes);
 
-	fprintf(fileID, '\nSize: %d\tError: %e.', ...
+	fprintf(fileID, '\nSize: %d\tError: %.2e.', ...
 			sizes(2, j), errors(2, j));
 
 	for j = 2:steps
@@ -75,7 +75,7 @@ function errorTrend
 		errors(2, j) = errorEstimate(uMesh, up, uh);
 		sizes(2, j) = max(meshSizes);
 		
-		fprintf(fileID, '\nSize: %d\tError: %e.', ...
+		fprintf(fileID, '\nSize: %d\tError: %.2e.', ...
 			sizes(2, j), errors(2, j));
 	end
 
@@ -124,21 +124,4 @@ function errorTrend
 	legend(location='northwest');
 
 	saveas(gcf, "../gallery/errorTrend", "jpeg")
-end
-
-function err = errorEstimate(mesh, up, uh)
-	err = 0;
-
-	for j = 1:length(mesh.nodes) - 1
-		h = mesh.elements(j, 3);
-		xs = mesh.nodes(j);
-		xd = mesh.nodes(j + 1);
-
-		gh = (uh(j + 1) - uh(j)) / h;
-
-		err = err + .5 * h * ((up(xs) - gh)^2 + ...
-			(up(xd) - gh)^2);
-	end
-
-	err = sqrt(err);
 end
