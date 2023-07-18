@@ -166,6 +166,7 @@ function comparison
 
 	hold off;
 	legend;
-
-	saveas(gcf, "../gallery/comparison", "jpeg")
+	
+	exportgraphics(gcf, "../gallery/comparison.pdf", ...
+		'ContentType', 'vector')
 end

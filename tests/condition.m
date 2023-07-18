@@ -77,6 +77,7 @@ function condition
 
 	hold off;
 	legend;
-
-	saveas(gcf, "../gallery/condition", "jpeg")
+	
+	exportgraphics(gcf, "../gallery/condition.pdf", ...
+		'ContentType', 'vector')
 end

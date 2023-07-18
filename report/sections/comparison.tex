@@ -1,14 +1,16 @@
-\subsection{Error}
+\subsection[Error Comparison]{$|u - u_h|_{1, \Omega}$ Error Comparison}
 
-Let's now compare the $|u - u_h|_{1, \Omega}$ error between a sequence of uniformly refined meshes and the just defined adaptive method.
+Let's now compare the error $|u - u_h|_{1, \Omega}$ between a sequence of uniformly refined meshes and the adaptive method we just defined.
 
-Due to the absence of a mesh size concept on the adaptive refined meshes, the errors get compared against the number of elements.
+Since there is no mesh size concept for the adaptive refined meshes\footnote{The adaptively refined mesh fails to meet the definition of a quasi-uniform mesh.}, we will compare the errors against the number of elements.
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=15cm]{comparison.jpg}
+	\includegraphics[width=15cm]{comparison.pdf}
 	\caption{Comparison between errors against number of elements.}
 \end{figure}
+
+As we can see the adaptive method works for both values of $\alpha$, showing great results for $\alpha = 10$ and more or less the same behaviour as the standard method for $\alpha = 5/3$.
 
 \newpage
 \begin{multicols}{2}
@@ -16,11 +18,11 @@ Due to the absence of a mesh size concept on the adaptive refined meshes, the er
 \end{multicols}
 
 \newpage
-\subsection{Stiffness Matrix Conditioning}
+\subsection{Stiffness Matrix Conditioning Comparison}
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=15cm]{comparisonCond.jpg}
+	\includegraphics[width=15cm]{comparisonCond.pdf}
 	\caption{Comparison between stiffness matrix conditioning against number of elements.}
 \end{figure}
 

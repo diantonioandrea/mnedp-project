@@ -1,44 +1,44 @@
 \subsection{Poisson Problem}
 
-Let's start by considering the following problem, given $\Omega = (0, 1)$:
+Let's start by considering the following problem, given \(\Omega = (0, 1)\):
 \begin{gather}
 	\begin{cases}
 		-u^{\prime \prime}(x) = f(x) \quad \text{in } \Omega \\
 		u(0) = u(1) = 0
 	\end{cases},
 \end{gather}
-which is the \textit{Poisson equation} on $\Omega$ with \textit{Dirichlet's boundary conditions}.
+which is the \textit{Poisson equation} on \(\Omega\) with \textit{Dirichlet's boundary conditions}.
 
-We'll consider a source $f(x)$ evaluated by considering the exact solution $u_{\alpha}$:
+We'll consider a source \(f(x)\) evaluated by considering the exact solution \(u_{\alpha}\):
 \begin{gather}
 	u_{\alpha}(x) = x^{\alpha} (1 - x),
 \end{gather}
-on $\alpha > 1.5$, so that:
+where \(\alpha > 1.5\), so that:
 \begin{gather}
 	f(x) = \alpha (\alpha + 1) x^{\alpha - 1} - \alpha (\alpha - 1) x^{\alpha - 2}.
 \end{gather}
 
-Through the analysis of this problem, we'll stick to these two cases: $\alpha = 5/3, 10$.
+Through the analysis of this problem, we'll stick to these two cases: \(\alpha = 5/3, 10\).
 
 \subsubsection{Solution's Sobolev Regularity} \label{sob_regularity}
 
-Let's discuss the Sobolev regularity for the two cases: $\alpha = 5/3, 10$.
+Let's discuss the Sobolev regularity for the two cases: \(\alpha = 5/3, 10\).
 
-Given $\alpha = 10$, we have that $\forall k \in \N$:
+For \(\alpha = 10\), we have that \(\forall k \in \N\):
 \begin{gather}
 	u_{10}(x) = x^{10} (1 - x) \in H^{k}(\Omega),
 \end{gather}
-being $u_{10}(x)$ a polynomial function, so that we can conclude that $u_{10}$ has a Sobolev regularity of $+\infty$.
+being \(u_{10}(x)\) a polynomial function, so that we can conclude that \(u_{10}\) has a Sobolev regularity of \(+\infty\).
 
-Given $\alpha = 5/3$, however, we have that:
+For \(\alpha = 5/3\), however, we have that:
 \begin{gather}
 	u_{5/3}(x) = x^{5/3} (1 - x) \in H^{k}(\Omega)
 \end{gather}
-for just $k \in \{0, 1, 2\}$, which are the only values of $k$ for which $D^{\gamma} u_{5/3}(x) \in L^2(\Omega)$ given $\gamma \le k$, so that we can conclude that $u_{5/3}$ has a Sobolev regularity of $2$.
+for just \(k \in \{0, 1, 2\}\), which are the only values of \(k\) for which \(D^{\gamma} u_{5/3}(x) \in L^2(\Omega)\) given \(\gamma \le k\), so that we can conclude that \(u_{5/3}\) has a Sobolev regularity of \(2\).
 
 \subsection{Weak Formulation and Finite Element Discretization} \label{fem_definition}
 
-The weak formulation for the problem requires to find a $u \in V = H_0^1(\Omega)$ such that:
+The weak formulation for the problem requires finding a \(u \in V = H_0^1(\Omega)\) such that:
 \begin{gather}
 	a(u, v) = (f, v)_{0, \Omega} \quad \forall v \in V,
 \end{gather}
@@ -47,7 +47,7 @@ where:
 	a(u, v) = (u^{\prime}, v^{\prime})_{0, \Omega}.
 \end{gather}
 
-By introducing $V_h$ as the linear Lagrangian finite element space on a given partition $\Tau_h$ of $\Omega$ we have the finite element discretization which requires to find a $u_h \in V_h$ such that:
+By introducing \(V_h\) as the linear Lagrangian finite element space on a given partition \(\Tau_h\) of \(\Omega\), we have the finite element discretization, which requires finding a \(u_h \in V_h\) such that:
 \begin{gather}
 	a(u_h, v_h) = (f, v_h)_{0, \Omega} \quad \forall v_h \in V_h.
 \end{gather}

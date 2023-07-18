@@ -126,6 +126,7 @@ function reliability
 
 	hold off;
 	legend(Location='southeast');
-
-	saveas(gcf, "../gallery/reliability", "jpeg")
+	
+	exportgraphics(gcf, "../gallery/reliability.pdf", ...
+		'ContentType', 'vector')
 end

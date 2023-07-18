@@ -123,5 +123,6 @@ function errorTrend
 	hold off;
 	legend(location='northwest');
 
-	saveas(gcf, "../gallery/errorTrend", "jpeg")
+	exportgraphics(gcf, "../gallery/errorTrend.pdf", ...
+		'ContentType', 'vector')
 end

@@ -163,6 +163,7 @@ function comparisonCond
 
 	hold off;
 	legend;
-
-	saveas(gcf, "../gallery/comparisonCond", "jpeg")
+	
+	exportgraphics(gcf, "../gallery/comparisonCond.pdf", ...
+		'ContentType', 'vector')
 end

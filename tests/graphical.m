@@ -58,6 +58,7 @@ function graphical
 
     hold off;
     legend(Location='northwest');
-
-    saveas(gcf, "../gallery/graphical", "jpeg")
+	
+	exportgraphics(gcf, "../gallery/graphical.pdf", ...
+		'ContentType', 'vector')
 end
