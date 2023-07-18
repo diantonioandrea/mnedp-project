@@ -1,5 +1,5 @@
 % Andrea Di Antonio, 858798.
-function errorTrend
+function errorTrend(~)
 	%% Initialization
 	% FEM.
 	addpath('../src')
@@ -123,6 +123,17 @@ function errorTrend
 	hold off;
 	legend(location='northwest');
 
-	exportgraphics(gcf, "../gallery/errorTrend.pdf", ...
-		'ContentType', 'vector')
+	if nargin > 0
+		bck = [253	246	227] / 255;
+	
+		set(gca,'color', bck)
+		set(legend, 'color', bck)
+		
+		exportgraphics(gcf, "../gallery/errorTrend.pdf", ...
+			'ContentType', 'vector', 'BackgroundColor', bck)
+
+	else
+		exportgraphics(gcf, "../gallery/errorTrend.pdf", ...
+			'ContentType', 'vector')
+	end
 end

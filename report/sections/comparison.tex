@@ -20,11 +20,19 @@ As we can see the adaptive method works for both values of $\alpha$, showing gre
 \newpage
 \subsection{Stiffness Matrix Conditioning Comparison}
 
+Given what we said on \nameref{condition}:
+\begin{gather}
+	\chi(\underline{\underline{A}}) \approx h^{-2},
+\end{gather}
+we may have some problems for the condition number of the stiffness matrix in the adaptive algorithm as the mesh size can get very small for some elements even with a low number of total nodes.
+
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=15cm]{comparisonCond.pdf}
 	\caption{Comparison between stiffness matrix conditioning against number of elements.}
 \end{figure}
+
+we can observe that when the number of elements is fixed, the condition number is higher for the adaptive method matrix 
 
 \newpage
 \begin{multicols}{2}

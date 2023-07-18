@@ -1,5 +1,5 @@
 % Andrea Di Antonio, 858798.
-function graphical
+function graphical(~)
     % FEM.
 	addpath('../src')
 
@@ -36,6 +36,13 @@ function graphical
     hold off;
     legend(Location='northwest');
 
+	if nargin > 0
+		bck = [253	246	227] / 255;
+	
+		set(gca,'color', bck)
+		set(legend, 'color', bck)
+	end
+
     %% Alpha = 10.
     u = @(x) u_a(10, x);
 	f = @(x) f_a(10, x);
@@ -59,6 +66,15 @@ function graphical
     hold off;
     legend(Location='northwest');
 	
-	exportgraphics(gcf, "../gallery/graphical.pdf", ...
-		'ContentType', 'vector')
+	if nargin > 0
+		set(gca,'color', bck)
+		set(legend, 'color', bck)
+		
+		exportgraphics(gcf, "../gallery/graphical.pdf", ...
+			'ContentType', 'vector', 'BackgroundColor', bck)
+
+	else
+		exportgraphics(gcf, "../gallery/graphical.pdf", ...
+			'ContentType', 'vector')
+	end
 end

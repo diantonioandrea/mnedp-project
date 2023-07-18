@@ -1,5 +1,5 @@
 % Andrea Di Antonio, 858798.
-function comparison
+function comparison(~)
 	%% Initialization
 	% FEM.
 	addpath('../src')
@@ -149,6 +149,13 @@ function comparison
 
 	hold off;
 	legend;
+
+	if nargin > 0
+		bck = [253	246	227] / 255;
+	
+		set(gca,'color', bck)
+		set(legend, 'color', bck)
+	end
 	
 	% Alpha = 10.
 	nexttile;
@@ -167,6 +174,15 @@ function comparison
 	hold off;
 	legend;
 	
-	exportgraphics(gcf, "../gallery/comparison.pdf", ...
-		'ContentType', 'vector')
+	if nargin > 0
+		set(gca,'color', bck)
+		set(legend, 'color', bck)
+		
+		exportgraphics(gcf, "../gallery/comparison.pdf", ...
+			'ContentType', 'vector', 'BackgroundColor', bck)
+
+	else
+		exportgraphics(gcf, "../gallery/comparison.pdf", ...
+			'ContentType', 'vector')
+	end
 end

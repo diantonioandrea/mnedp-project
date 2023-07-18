@@ -1,5 +1,5 @@
 % Andrea Di Antonio, 858798.
-function condition
+function condition(~)
 	% FEM.
 	addpath('../src')
 
@@ -78,6 +78,17 @@ function condition
 	hold off;
 	legend;
 	
-	exportgraphics(gcf, "../gallery/condition.pdf", ...
-		'ContentType', 'vector')
+	if nargin > 0
+		bck = [253	246	227] / 255;
+	
+		set(gca,'color', bck)
+		set(legend, 'color', bck)
+		
+		exportgraphics(gcf, "../gallery/condition.pdf", ...
+			'ContentType', 'vector', 'BackgroundColor', bck)
+
+	else
+		exportgraphics(gcf, "../gallery/condition.pdf", ...
+			'ContentType', 'vector')
+	end
 end

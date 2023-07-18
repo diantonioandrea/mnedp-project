@@ -1,5 +1,5 @@
 % Andrea Di Antonio, 858798
-function reliability
+function reliability(~)
 	%% Initialization
 	% FEM.
 	addpath('../src')
@@ -110,6 +110,13 @@ function reliability
 	hold off;
 	legend(Location='southeast');
 
+	if nargin > 0
+		bck = [253	246	227] / 255;
+	
+		set(gca,'color', bck)
+		set(legend, 'color', bck)
+	end
+
 	nexttile;
 	loglog(sizes(2, :), errors(2, :), ...
 		DisplayName='\alpha = 10 errors', LineWidth=2, ...
@@ -127,6 +134,15 @@ function reliability
 	hold off;
 	legend(Location='southeast');
 	
-	exportgraphics(gcf, "../gallery/reliability.pdf", ...
-		'ContentType', 'vector')
+	if nargin > 0
+		set(gca,'color', bck)
+		set(legend, 'color', bck)
+		
+		exportgraphics(gcf, "../gallery/reliability.pdf", ...
+			'ContentType', 'vector', 'BackgroundColor', bck)
+
+	else
+		exportgraphics(gcf, "../gallery/reliability.pdf", ...
+			'ContentType', 'vector')
+	end
 end
