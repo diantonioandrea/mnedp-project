@@ -30,8 +30,8 @@ function graphical(~)
 		DisplayName='u_h(x), \alpha = 5/3', LineWidth=2, ...
 		Color=red,LineStyle='--');
 
-	xlabel("X");
-	ylabel("Y");
+	xlabel("x");
+	ylabel("u(x), u_h(x)");
 
     hold off;
     legend(Location='northwest');
@@ -60,8 +60,8 @@ function graphical(~)
 		DisplayName='u_h(x), \alpha = 10', LineWidth=2, ...
 		Color=red,LineStyle='--');
 
-	xlabel("X");
-	ylabel("Y");
+	xlabel("x");
+	ylabel("u(x), u_h(x)");
 
     hold off;
     legend(Location='northwest');

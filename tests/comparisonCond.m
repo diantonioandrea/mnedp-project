@@ -145,7 +145,7 @@ function comparisonCond(~)
 	ylabel("\chi(A)");
 
 	hold off;
-	legend;
+	legend(location='northwest');
 
 	if nargin > 0
 		bck = [253	246	227] / 255;
@@ -169,7 +169,7 @@ function comparisonCond(~)
 	ylabel("\chi(A)");
 
 	hold off;
-	legend;
+	legend(location='northwest');
 	
 	if nargin > 0
 		set(gca,'color', bck)
