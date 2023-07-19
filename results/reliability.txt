@@ -23,3 +23,8 @@ Size: 3.906250e-03	Error: 4.11e-03	Estimator: 7.17e-02.
 Size: 1.953125e-03	Error: 2.06e-03	Estimator: 5.08e-02.
 Size: 9.765625e-04	Error: 1.03e-03	Estimator: 3.60e-02.
 Size: 4.882812e-04	Error: 5.14e-04	Estimator: 2.55e-02.
+
+Constants lower bounds.
+
+alpha = 5/3 Lower bound: C >= 1.03e-02.
+alpha = 10 Lower bound: C >= 2.02e-02.

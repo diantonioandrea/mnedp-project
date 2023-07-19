@@ -85,6 +85,15 @@ function reliability(~)
 		fprintf(fileID, '\nSize: %d\tError: %.2e\tEstimator: %.2e.', ...
 			sizes(2, j), errors(2, j), estimates(2, j));
 	end
+	
+	%% Constants interpolation.
+	
+	% Estimates the lower bounds for the constant C.	
+	fprintf(fileID, '\n\nConstants lower bounds.');
+	fprintf(fileID, '\n\nalpha = 5/3 Lower bound: C >= %.2e.', ...
+		min(errors(1, :) ./ estimates(1, :)));
+	fprintf(fileID, '\nalpha = 10 Lower bound: C >= %.2e.', ...
+		min(errors(2, :) ./ estimates(2, :)));
 
 	%% Graphics.
 	
