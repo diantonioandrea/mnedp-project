@@ -82,12 +82,12 @@ function errorTrend(~)
 	%% Graphics.
 	
 	green = [133, 153, 0] / 255;
-	red = [220, 50, 47] / 255;
+	orange = [203, 75, 22] / 255;
 	blue = [38	139	210] / 255;
 
 	loglog(sizes(1, :), errors(1, :), ...
 		DisplayName='\alpha = 5/3', LineWidth=2, ...
-		Color=red);
+		Color=orange);
 
 	hold on;
 

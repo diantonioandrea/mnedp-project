@@ -126,7 +126,7 @@ function comparisonCond(~)
 	%% Graphics.
 	
 	green = [133, 153, 0] / 255;
-	red = [220, 50, 47] / 255;
+	orange = [203, 75, 22] / 255;
 	
 	tiledlayout(2, 1);
 
@@ -134,7 +134,7 @@ function comparisonCond(~)
 	nexttile;
 	loglog(sizes(1, :), conds(1, :), ...
 		DisplayName='Simple, \alpha = 5/3.', LineWidth=2, ...
-		Color=red);
+		Color=orange);
 	hold on;
 
 	loglog(sizes(2, :), conds(2, :), ...
@@ -158,7 +158,7 @@ function comparisonCond(~)
 	nexttile;
 	loglog(sizes(3, :), conds(3, :), ...
 		DisplayName='Simple, \alpha = 10.', LineWidth=2, ...
-		Color=red);
+		Color=orange);
 	hold on;
 
 	loglog(sizes(4, :), conds(4, :), ...

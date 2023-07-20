@@ -98,7 +98,7 @@ function reliability(~)
 	%% Graphics.
 	
 	green = [133, 153, 0] / 255;
-	red = [220, 50, 47] / 255;
+	orange = [203, 75, 22] / 255;
 
 	tiledlayout(2, 1);
 
@@ -111,7 +111,7 @@ function reliability(~)
 
 	loglog(sizes(1, :), estimates(1, :), ...
 		DisplayName='\alpha = 5/3 \eta', LineWidth=2, ...
-		Color=red);
+		Color=orange);
 
 	xlabel("Mesh Size (h)");
 	ylabel("|u - u_h|_{1, \Omega}, \eta");
@@ -135,7 +135,7 @@ function reliability(~)
 
 	loglog(sizes(2, :), estimates(2, :), ...
 		DisplayName='\alpha = 10 \eta', LineWidth=2, ...
-		Color=red);
+		Color=orange);
 
 	xlabel("Mesh Size (h)");
 	ylabel("|u - u_h|_{1, \Omega}, \eta");

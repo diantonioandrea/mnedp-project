@@ -16,7 +16,7 @@ function graphical(~)
     [uh, ~, ~] = solver(uMesh, f);
     
     green = [133, 153, 0] / 255;
-	red = [220, 50, 47] / 255;
+	orange = [203, 75, 22] / 255;
     
     tiledlayout(2, 1);
     nexttile;
@@ -28,7 +28,7 @@ function graphical(~)
 
     plot(uMesh.nodes, uh, ...
 		DisplayName='u_h(x), \alpha = 5/3', LineWidth=2, ...
-		Color=red,LineStyle='--');
+		Color=orange,LineStyle='--');
 
 	xlabel("x");
 	ylabel("u(x), u_h(x)");
@@ -58,7 +58,7 @@ function graphical(~)
 	
 	plot(uMesh.nodes, uh, ...
 		DisplayName='u_h(x), \alpha = 10', LineWidth=2, ...
-		Color=red,LineStyle='--');
+		Color=orange,LineStyle='--');
 
 	xlabel("x");
 	ylabel("u(x), u_h(x)");

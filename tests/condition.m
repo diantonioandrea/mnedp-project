@@ -49,7 +49,7 @@ function condition(~)
 	%% Graphics.
 	
 	green = [133, 153, 0] / 255;
-	red = [220, 50, 47] / 255;
+	orange = [203, 75, 22] / 255;
 
 	loglog(sizes(:), conds(:), ...
 		DisplayName='\alpha = 5/3', LineWidth=2, ...
@@ -67,7 +67,7 @@ function condition(~)
 		log(conds(:)), 1);
 	
 	loglog(sizes(:), exp(coeffs(2)) * (sizes(:) .^ ...
-		coeffs(1)), LineWidth=2, Color=red, ...
+		coeffs(1)), LineWidth=2, Color=orange, ...
 		LineStyle=":", DisplayName="\alpha = 5/3 Interpolant.");
 	
 	% Prints coefficients.
