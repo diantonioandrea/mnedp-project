@@ -1,4 +1,4 @@
-Errors evaluation, alpha = 5/3.
+Errors evaluation, alpha = 5/3
 
 Size: 2.500000e-01	Error: 1.45e-01
 Size: 1.250000e-01	Error: 7.47e-02
@@ -11,7 +11,7 @@ Size: 1.953125e-03	Error: 1.22e-03
 Size: 9.765625e-04	Error: 6.10e-04
 Size: 4.882812e-04	Error: 3.06e-04
 
-Errors evaluation, alpha = 10.
+Errors evaluation, alpha = 10
 
 Size: 2.500000e-01	Error: 2.11e-01
 Size: 1.250000e-01	Error: 1.25e-01
@@ -27,4 +27,4 @@ Size: 4.882812e-04	Error: 5.14e-04
 Loglog interpolation
 
 alpha = 5/3 Interpolant: y = 0.989789x + (-0.536034)
-alpha = 10 Interpolant: y = 0.979183x + (-0.070194).
+alpha = 10 Interpolant: y = 0.979183x + (-0.070194)

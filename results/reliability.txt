@@ -1,4 +1,4 @@
-Errors and estimator evaluation, alpha = 5/3.
+Errors and estimator evaluation, alpha = 5/3
 
 Size: 2.500000e-01	Error: 1.45e-01	Estimator: 6.83e-01
 Size: 1.250000e-01	Error: 7.47e-02	Estimator: 4.77e-01
@@ -11,7 +11,7 @@ Size: 1.953125e-03	Error: 1.22e-03	Estimator: 5.90e-02
 Size: 9.765625e-04	Error: 6.10e-04	Estimator: 4.18e-02
 Size: 4.882812e-04	Error: 3.06e-04	Estimator: 2.96e-02
 
-Errors and estimator evaluation, alpha = 5/3.
+Errors and estimator evaluation, alpha = 5/3
 
 Size: 2.500000e-01	Error: 2.11e-01	Estimator: 3.80e-01
 Size: 1.250000e-01	Error: 1.25e-01	Estimator: 4.46e-01

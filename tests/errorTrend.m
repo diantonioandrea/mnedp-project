@@ -25,7 +25,7 @@ function errorTrend(~)
 	uMesh = builder(5);
 	meshSizes = diff(uMesh.nodes);
 
-	fprintf(fileID, 'Errors evaluation, alpha = 5/3.\n');
+	fprintf(fileID, 'Errors evaluation, alpha = 5/3\n');
 
 	j = 1;
 	[uh, ~, ~] = solver(uMesh, f);
@@ -56,7 +56,7 @@ function errorTrend(~)
 	uMesh = builder(5);
 	meshSizes = diff(uMesh.nodes);
 
-	fprintf(fileID, '\n\nErrors evaluation, alpha = 10.\n');
+	fprintf(fileID, '\n\nErrors evaluation, alpha = 10\n');
 	
 	j = 1;
 	[uh, ~, ~] = solver(uMesh, f);
@@ -117,7 +117,7 @@ function errorTrend(~)
 	fprintf(fileID, '\n\nLoglog interpolation');
 	fprintf(fileID, '\n\nalpha = 5/3 Interpolant: y = %fx + (%f)', ...
 		coeffs(1, 1), coeffs(1, 2));
-	fprintf(fileID, '\nalpha = 10 Interpolant: y = %fx + (%f).\n', ...
+	fprintf(fileID, '\nalpha = 10 Interpolant: y = %fx + (%f)\n', ...
 		coeffs(2, 1), coeffs(2, 2));
 
 	hold off;

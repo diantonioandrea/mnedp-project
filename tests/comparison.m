@@ -24,7 +24,7 @@ function comparison(~)
 	% Test 1.
 	firstMesh = builder(5);
 
-	fprintf(fileID, 'Errors evaluation, alpha = 5/3.\nSimple.\n');
+	fprintf(fileID, 'Errors evaluation, alpha = 5/3.\nSimple\n');
 	
 	j = 1;
 	[uh, ~, ~] = solver(firstMesh, f);
@@ -49,7 +49,7 @@ function comparison(~)
 	% Test 2.
 	secondMesh = builder(5);
 
-	fprintf(fileID, '\n\nAdaptive.\n');
+	fprintf(fileID, '\n\nAdaptive\n');
 
 	j = 1;
 	[uh, ~, ~] = solver(secondMesh, f);
@@ -78,7 +78,7 @@ function comparison(~)
 	% Test 3.
 	firstMesh = builder(5);
 
-	fprintf(fileID, '\n\nErrors evaluation, alpha = 10.\nSimple.\n');
+	fprintf(fileID, '\n\nErrors evaluation, alpha = 10.\nSimple\n');
 	
 	j = 1;
 	[uh, ~, ~] = solver(firstMesh, f);
@@ -103,7 +103,7 @@ function comparison(~)
 	% Test 4.
 	secondMesh = builder(5);
 
-	fprintf(fileID, '\n\nAdaptive.\n');
+	fprintf(fileID, '\n\nAdaptive\n');
 
 	j = 1;
 	[uh, ~, ~] = solver(secondMesh, f);

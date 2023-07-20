@@ -1,5 +1,5 @@
 Errors evaluation, alpha = 5/3.
-Simple.
+Simple
 
 Elements: 4	Error: 1.45e-01
 Elements: 8	Error: 7.47e-02
@@ -12,7 +12,7 @@ Elements: 512	Error: 1.22e-03
 Elements: 1024	Error: 6.10e-04
 Elements: 2048	Error: 3.06e-04
 
-Adaptive.
+Adaptive
 
 Elements: 4	Error: 1.45e-01
 Elements: 5	Error: 1.14e-01
@@ -26,7 +26,7 @@ Elements: 25	Error: 2.12e-02
 Elements: 31	Error: 1.81e-02
 
 Errors evaluation, alpha = 10.
-Simple.
+Simple
 
 Elements: 4	Error: 2.11e-01
 Elements: 8	Error: 1.25e-01
@@ -39,7 +39,7 @@ Elements: 512	Error: 2.06e-03
 Elements: 1024	Error: 1.03e-03
 Elements: 2048	Error: 5.14e-04
 
-Adaptive.
+Adaptive
 
 Elements: 4	Error: 2.11e-01
 Elements: 5	Error: 1.27e-01

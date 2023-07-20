@@ -14,11 +14,11 @@ function mesh = builder(nodes, a, b)
 
 	% a, b checks.
 	if nargin == 2
-		error('Must set both a and b or none of them.')
+		error('Must set both a and b or none of them')
 	end
 	
 	if nargin == 1; a = 0; b = 1; end
-	if nargin == 3 && a >= b; error('Set error.'); end
+	if nargin == 3 && a >= b; error('Set error'); end
 
 	% Builds the mesh nodes.
 	if length(nodes) == 1

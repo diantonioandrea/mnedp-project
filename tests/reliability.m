@@ -27,7 +27,7 @@ function reliability(~)
 	meshSizes = diff(uMesh.nodes);
 
 	fprintf(fileID, ['Errors and estimator ' ...
-		'evaluation, alpha = 5/3.\n']);
+		'evaluation, alpha = 5/3\n']);
 
 	j = 1;
 	[uh, ~, ~] = solver(uMesh, f);
@@ -61,7 +61,7 @@ function reliability(~)
 	meshSizes = diff(uMesh.nodes);
 
 	fprintf(fileID, ['\n\nErrors and estimator ' ...
-		'evaluation, alpha = 5/3.\n']);
+		'evaluation, alpha = 5/3\n']);
 
 	j = 1;
 	[uh, ~, ~] = solver(uMesh, f);

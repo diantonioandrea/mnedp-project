@@ -28,13 +28,13 @@ Implementazione di un metodo "Adaptive 1D 1st-order Lagrange FEM" per la soluzio
 
 Test usati nel corso della relazione.
 
-- 3: **Tests on Uniform Meshes**
+- 3: **Tests on Uniformly Refined Meshes**
 	- 3.1: `/tests/graphical.m`
 	- 3.2: `/tests/errorTrend.m`
 	- 3.3: `/tests/condition.m`
-- 4: **Adaptive Method**
+- 4: **Adaptive Refinement Method**
 	- 4.2: `/tests/reliability.m`
-- 5: **Comparisons**
+- 5: **Comparisons Between the two Approaches**
 	- 5.1: `/tests/comparison.m`
 	- 5.2: `/tests/comparisonCond.m`
 

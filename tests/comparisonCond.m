@@ -22,7 +22,7 @@ function comparisonCond(~)
 	% Test 1.
 	firstMesh = builder(5);
 
-	fprintf(fileID, 'Condition number, alpha = 5/3.\nSimple.\n');
+	fprintf(fileID, 'Condition number, alpha = 5/3.\nSimple\n');
 	
 	j = 1;
 	[~, A, ~] = solver(firstMesh, f);
@@ -47,7 +47,7 @@ function comparisonCond(~)
 	% Test 2.
 	secondMesh = builder(5);
 
-	fprintf(fileID, '\n\nAdaptive.\n');
+	fprintf(fileID, '\n\nAdaptive\n');
 
 	j = 1;
 	[~, A, ~] = solver(secondMesh, f);
@@ -75,7 +75,7 @@ function comparisonCond(~)
 	% Test 3.
 	firstMesh = builder(5);
 
-	fprintf(fileID, '\n\nCondition number, alpha = 10.\nSimple.\n');
+	fprintf(fileID, '\n\nCondition number, alpha = 10.\nSimple\n');
 	
 	j = 1;
 	[~, A, ~] = solver(firstMesh, f);
@@ -100,7 +100,7 @@ function comparisonCond(~)
 	% Test 4.
 	secondMesh = builder(5);
 
-	fprintf(fileID, '\n\nAdaptive.\n');
+	fprintf(fileID, '\n\nAdaptive\n');
 
 	j = 1;
 	[~, A, ~] = solver(secondMesh, f);
