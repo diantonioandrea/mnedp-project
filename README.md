@@ -23,3 +23,21 @@ Implementazione di un metodo "Adaptive 1D 1st-order Lagrange FEM" per la soluzio
 	- `/tests/graphical.m` Confronto qualitativo tra la soluzione analitica e numerica.
 	- `/tests/reliability.m` Affidabilità dello stimatore dell'errore del metodo adattivo.
 	- `/tests/private/errorEstimate.m` Stima dell'errore in seminorma H<sub>1</sub>.
+
+## Indice dei test
+
+Test usati nel corso della relazione.
+
+- 3: **Tests on Uniform Meshes**
+	- 3.1: `/tests/graphical.m`
+	- 3.2: `/tests/errorTrend.m`
+	- 3.3: `/tests/condition.m`
+- 4: **Adaptive Method**
+	- 4.2: `/tests/reliability.m`
+- 5: **Comparisons**
+	- 5.1: `/tests/comparison.m`
+	- 5.2: `/tests/comparisonCond.m`
+
+## Note aggiuntive
+
+I codici di test producono file di testo di risultato e immagini rispettivamente in `../results/` e `../gallery/` rispetto alla cartella di esecuzione.
