@@ -15,7 +15,7 @@ Elements: 2048	Cond.: 1.70e+06.
 Adaptive.
 
 Elements: 4	Cond.: 5.83e+00.
-Elements: 5	Cond.: 1.56e+01.
+Elements: 5	Cond.: 1.04e+01.
 Elements: 6	Cond.: 1.83e+01.
 Elements: 8	Cond.: 5.30e+01.
 Elements: 10	Cond.: 6.29e+01.
@@ -45,9 +45,9 @@ Elements: 4	Cond.: 5.83e+00.
 Elements: 5	Cond.: 1.04e+01.
 Elements: 6	Cond.: 2.13e+01.
 Elements: 8	Cond.: 5.75e+01.
-Elements: 10	Cond.: 1.42e+02.
-Elements: 13	Cond.: 2.20e+02.
+Elements: 10	Cond.: 1.24e+02.
+Elements: 13	Cond.: 2.15e+02.
 Elements: 16	Cond.: 4.83e+02.
-Elements: 20	Cond.: 6.89e+02.
+Elements: 20	Cond.: 6.72e+02.
 Elements: 25	Cond.: 9.42e+02.
 Elements: 31	Cond.: 2.07e+03.

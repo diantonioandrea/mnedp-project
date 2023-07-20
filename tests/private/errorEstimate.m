@@ -8,7 +8,7 @@ function err = errorEstimate(mesh, up, uh)
 	h = mesh.elements(:, 3)';
 	gh = diff(uh) ./ h;
 	
-	% Uses Simpson's rule.
+	% Uses Simpson's 1/3 rule.
 	errors = h / 6 .* ((up(xs) - gh) .^ 2 + ...
 		+ 4 * (up(mds) - gh) .^ 2 + (up(xd) - gh) .^ 2);
 

@@ -13,7 +13,7 @@ function [estimates, estimator] = estimate(mesh, f)
 		% Integral estimate.
 		% uh'' = 0.
 		% Uses midpoint.
-		estimates(j) = .5 * f((xs + xd) / 2)^2 * h^3;
+		estimates(j) = f((xs + xd) / 2)^2 * h^3;
 
 		% gradJump estimate.
 		estimates(j) = estimates(j) + .5 * h * ...

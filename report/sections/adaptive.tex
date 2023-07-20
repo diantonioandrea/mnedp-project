@@ -1,4 +1,4 @@
-\subsection{Error Estimation and Refinement}
+\subsection{Error Estimation and Adaptive Refinement}
 
 Instead of considering a sequence of uniformly refined meshes, we want to use a new algorithm that locally evaluates an error estimator and marks a certain number of elements for refinement. The local error estimator is given by:
 
@@ -6,7 +6,7 @@ Instead of considering a sequence of uniformly refined meshes, we want to use a 
 	\eta_K^2 = h_K \lVert f + \Delta u_h \rVert_{0, K}^2 + \frac{1}{2} \sum_{e \in E_K} h_K \lVert \llbracket \underline{\nabla} u_h \rrbracket \rVert_{0, e}.
 \end{gather}
 
-In the 1D case, we can rewrite \ref{estimator} as it follows\footnote{$K = [x_{n - 1}, x_n]$.}:
+In the 1D case, we can rewrite \ref{estimator} as it follows\footnote{$K = [x_{n - 1}, x_n]$.}\footnote{$u_h^{\prime \prime} = 0$.}:
 
 \begin{gather}
 	\eta_K^2 = h_K \lVert f \rVert_{0, K}^2 + \frac{1}{2} h_K \left[ \lvert \llbracket u_h^\prime \rrbracket (x_{n - 1}) \rvert + \lvert \llbracket u_h^\prime \rrbracket (x_n) \rvert \right].

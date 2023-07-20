@@ -1,30 +1,30 @@
 Errors and estimator evaluation, alpha = 5/3.
 
-Size: 2.500000e-01	Error: 1.45e-01	Estimator: 5.98e-01.
-Size: 1.250000e-01	Error: 7.47e-02	Estimator: 4.45e-01.
-Size: 6.250000e-02	Error: 3.79e-02	Estimator: 3.23e-01.
-Size: 3.125000e-02	Error: 1.91e-02	Estimator: 2.31e-01.
-Size: 1.562500e-02	Error: 9.63e-03	Estimator: 1.65e-01.
-Size: 7.812500e-03	Error: 4.84e-03	Estimator: 1.17e-01.
-Size: 3.906250e-03	Error: 2.43e-03	Estimator: 8.32e-02.
+Size: 2.500000e-01	Error: 1.45e-01	Estimator: 6.83e-01.
+Size: 1.250000e-01	Error: 7.47e-02	Estimator: 4.77e-01.
+Size: 6.250000e-02	Error: 3.79e-02	Estimator: 3.35e-01.
+Size: 3.125000e-02	Error: 1.91e-02	Estimator: 2.36e-01.
+Size: 1.562500e-02	Error: 9.63e-03	Estimator: 1.67e-01.
+Size: 7.812500e-03	Error: 4.84e-03	Estimator: 1.18e-01.
+Size: 3.906250e-03	Error: 2.43e-03	Estimator: 8.34e-02.
 Size: 1.953125e-03	Error: 1.22e-03	Estimator: 5.90e-02.
-Size: 9.765625e-04	Error: 6.10e-04	Estimator: 4.17e-02.
-Size: 4.882812e-04	Error: 3.06e-04	Estimator: 2.95e-02.
+Size: 9.765625e-04	Error: 6.10e-04	Estimator: 4.18e-02.
+Size: 4.882812e-04	Error: 3.06e-04	Estimator: 2.96e-02.
 
 Errors and estimator evaluation, alpha = 5/3.
 
-Size: 2.500000e-01	Error: 2.11e-01	Estimator: 3.26e-01.
-Size: 1.250000e-01	Error: 1.25e-01	Estimator: 3.72e-01.
-Size: 6.250000e-02	Error: 6.51e-02	Estimator: 2.76e-01.
-Size: 3.125000e-02	Error: 3.28e-02	Estimator: 1.98e-01.
-Size: 1.562500e-02	Error: 1.64e-02	Estimator: 1.42e-01.
-Size: 7.812500e-03	Error: 8.23e-03	Estimator: 1.01e-01.
-Size: 3.906250e-03	Error: 4.11e-03	Estimator: 7.17e-02.
-Size: 1.953125e-03	Error: 2.06e-03	Estimator: 5.08e-02.
-Size: 9.765625e-04	Error: 1.03e-03	Estimator: 3.60e-02.
+Size: 2.500000e-01	Error: 2.11e-01	Estimator: 3.80e-01.
+Size: 1.250000e-01	Error: 1.25e-01	Estimator: 4.46e-01.
+Size: 6.250000e-02	Error: 6.51e-02	Estimator: 3.14e-01.
+Size: 3.125000e-02	Error: 3.28e-02	Estimator: 2.14e-01.
+Size: 1.562500e-02	Error: 1.64e-02	Estimator: 1.47e-01.
+Size: 7.812500e-03	Error: 8.23e-03	Estimator: 1.03e-01.
+Size: 3.906250e-03	Error: 4.11e-03	Estimator: 7.24e-02.
+Size: 1.953125e-03	Error: 2.06e-03	Estimator: 5.11e-02.
+Size: 9.765625e-04	Error: 1.03e-03	Estimator: 3.61e-02.
 Size: 4.882812e-04	Error: 5.14e-04	Estimator: 2.55e-02.
 
 Constants lower bounds.
 
-alpha = 5/3 Lower bound: C >= 1.03e-02.
-alpha = 10 Lower bound: C >= 2.02e-02.
+alpha = 5/3 Lower bound: C >= 2.12e-01.
+alpha = 10 Lower bound: C >= 5.57e-01.

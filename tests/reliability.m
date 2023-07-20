@@ -91,9 +91,9 @@ function reliability(~)
 	% Estimates the lower bounds for the constant C.	
 	fprintf(fileID, '\n\nConstants lower bounds.');
 	fprintf(fileID, '\n\nalpha = 5/3 Lower bound: C >= %.2e.', ...
-		min(errors(1, :) ./ estimates(1, :)));
+		max(errors(1, :) ./ estimates(1, :)));
 	fprintf(fileID, '\nalpha = 10 Lower bound: C >= %.2e.', ...
-		min(errors(2, :) ./ estimates(2, :)));
+		max(errors(2, :) ./ estimates(2, :)));
 
 	%% Graphics.
 	
