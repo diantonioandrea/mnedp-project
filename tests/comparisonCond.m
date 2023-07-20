@@ -30,7 +30,7 @@ function comparisonCond(~)
 	sizes(1, j) = length(firstMesh.elements);
 	conds(1, j) = cond(A);
 
-	fprintf(fileID, '\nElements: %d\tCond.: %.2e.', ...
+	fprintf(fileID, '\nElements: %d\tCond.: %.2e', ...
 			sizes(1, j), conds(1, j));
 
 	for j = 2:steps
@@ -40,7 +40,7 @@ function comparisonCond(~)
 		sizes(1, j) = length(firstMesh.elements);
 		conds(1, j) = cond(A);
 		
-		fprintf(fileID, '\nElements: %d\tCond.: %.2e.', ...
+		fprintf(fileID, '\nElements: %d\tCond.: %.2e', ...
 			sizes(1, j), conds(1, j));
 	end
 	
@@ -55,7 +55,7 @@ function comparisonCond(~)
 	sizes(2, j) = length(secondMesh.elements);
 	conds(2, j) = cond(A);
 
-	fprintf(fileID, '\nElements: %d\tCond.: %.2e.', ...
+	fprintf(fileID, '\nElements: %d\tCond.: %.2e', ...
 			sizes(2, j), conds(2, j));
 
 	for j = 2:steps
@@ -66,7 +66,7 @@ function comparisonCond(~)
 		sizes(2, j) = length(secondMesh.elements);
 		conds(2, j) = cond(A);
 		
-		fprintf(fileID, '\nElements: %d\tCond.: %.2e.', ...
+		fprintf(fileID, '\nElements: %d\tCond.: %.2e', ...
 			sizes(2, j), conds(2, j));
 	end
 	%% Alpha = 10.
@@ -83,7 +83,7 @@ function comparisonCond(~)
 	sizes(3, j) = length(firstMesh.elements);
 	conds(3, j) = cond(A);
 
-	fprintf(fileID, '\nElements: %d\tCond.: %.2e.', ...
+	fprintf(fileID, '\nElements: %d\tCond.: %.2e', ...
 			sizes(3, j), conds(3, j));
 
 	for j = 2:steps
@@ -93,7 +93,7 @@ function comparisonCond(~)
 		sizes(3, j) = length(firstMesh.elements);
 		conds(3, j) = cond(A);
 		
-		fprintf(fileID, '\nElements: %d\tCond.: %.2e.', ...
+		fprintf(fileID, '\nElements: %d\tCond.: %.2e', ...
 			sizes(3, j), conds(3, j));
 	end
 
@@ -108,7 +108,7 @@ function comparisonCond(~)
 	sizes(4, j) = length(secondMesh.elements);
 	conds(4, j) = cond(A);
 
-	fprintf(fileID, '\nElements: %d\tCond.: %.2e.', ...
+	fprintf(fileID, '\nElements: %d\tCond.: %.2e', ...
 			sizes(4, j), conds(4, j));
 
 	for j = 2:steps
@@ -119,7 +119,7 @@ function comparisonCond(~)
 		sizes(4, j) = length(secondMesh.elements);
 		conds(4, j) = cond(A);
 		
-		fprintf(fileID, '\nElements: %d\tCond.: %.2e.', ...
+		fprintf(fileID, '\nElements: %d\tCond.: %.2e', ...
 			sizes(4, j), conds(4, j));
 	end
 
@@ -133,16 +133,16 @@ function comparisonCond(~)
 	% Alpha = 5/3.
 	nexttile;
 	loglog(sizes(1, :), conds(1, :), ...
-		DisplayName='Simple, \alpha = 5/3.', LineWidth=2, ...
+		DisplayName='Simple, \alpha = 5/3', LineWidth=2, ...
 		Color=orange);
 	hold on;
 
 	loglog(sizes(2, :), conds(2, :), ...
-		DisplayName='Adaptive, \alpha = 5/3.', LineWidth=2, ...
+		DisplayName='Adaptive, \alpha = 5/3', LineWidth=2, ...
 		Color=green);
 
-	xlabel("Number of elements");
-	ylabel("\chi(A)");
+	xlabel('Number of elements');
+	ylabel('\chi(A)');
 
 	hold off;
 	legend(location='northwest');
@@ -157,16 +157,16 @@ function comparisonCond(~)
 	% Alpha = 10.
 	nexttile;
 	loglog(sizes(3, :), conds(3, :), ...
-		DisplayName='Simple, \alpha = 10.', LineWidth=2, ...
+		DisplayName='Simple, \alpha = 10', LineWidth=2, ...
 		Color=orange);
 	hold on;
 
 	loglog(sizes(4, :), conds(4, :), ...
-		DisplayName='Adaptive, \alpha = 10.', LineWidth=2, ...
+		DisplayName='Adaptive, \alpha = 10', LineWidth=2, ...
 		Color=green);
 
-	xlabel("Number of elements");
-	ylabel("\chi(A)");
+	xlabel('Number of elements');
+	ylabel('\chi(A)');
 
 	hold off;
 	legend(location='northwest');
@@ -175,11 +175,11 @@ function comparisonCond(~)
 		set(gca,'color', bck)
 		set(legend, 'color', bck)
 		
-		exportgraphics(gcf, "../gallery/comparisonCond.pdf", ...
+		exportgraphics(gcf, '../gallery/comparisonCond.pdf', ...
 			'ContentType', 'vector', 'BackgroundColor', bck)
 
 	else
-		exportgraphics(gcf, "../gallery/comparisonCond.pdf", ...
+		exportgraphics(gcf, '../gallery/comparisonCond.pdf', ...
 			'ContentType', 'vector')
 	end
 end

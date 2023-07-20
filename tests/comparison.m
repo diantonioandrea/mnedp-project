@@ -32,7 +32,7 @@ function comparison(~)
 	errors(1, j) = errorEstimate(firstMesh, up, uh);
 	sizes(1, j) = length(firstMesh.elements);
 
-	fprintf(fileID, '\nElements: %d\tError: %.2e.', ...
+	fprintf(fileID, '\nElements: %d\tError: %.2e', ...
 			length(firstMesh.elements), errors(1, j));
 
 	for j = 2:steps
@@ -42,7 +42,7 @@ function comparison(~)
 		errors(1, j) = errorEstimate(firstMesh, up, uh);
 		sizes(1, j) = length(firstMesh.elements);
 		
-		fprintf(fileID, '\nElements: %d\tError: %.2e.', ...
+		fprintf(fileID, '\nElements: %d\tError: %.2e', ...
 			length(firstMesh.elements), errors(1, j));
 	end
 	
@@ -57,7 +57,7 @@ function comparison(~)
 	errors(2, j) = errorEstimate(secondMesh, up, uh);
 	sizes(2, j) = length(secondMesh.elements);
 
-	fprintf(fileID, '\nElements: %d\tError: %.2e.', ...
+	fprintf(fileID, '\nElements: %d\tError: %.2e', ...
 			length(secondMesh.elements), errors(2, j));
 
 	for j = 2:steps
@@ -68,7 +68,7 @@ function comparison(~)
 		errors(2, j) = errorEstimate(secondMesh, up, uh);
 		sizes(2, j) = length(secondMesh.elements);
 		
-		fprintf(fileID, '\nElements: %d\tError: %.2e.', ...
+		fprintf(fileID, '\nElements: %d\tError: %.2e', ...
 			length(secondMesh.elements), errors(2, j));
 	end
 	%% Alpha = 10.
@@ -86,7 +86,7 @@ function comparison(~)
 	errors(3, j) = errorEstimate(firstMesh, up, uh);
 	sizes(3, j) = length(firstMesh.elements);
 
-	fprintf(fileID, '\nElements: %d\tError: %.2e.', ...
+	fprintf(fileID, '\nElements: %d\tError: %.2e', ...
 			length(firstMesh.elements), errors(3, j));
 
 	for j = 2:steps
@@ -96,7 +96,7 @@ function comparison(~)
 		errors(3, j) = errorEstimate(firstMesh, up, uh);
 		sizes(3, j) = length(firstMesh.elements);
 		
-		fprintf(fileID, '\nElements: %d\tError: %.2e.', ...
+		fprintf(fileID, '\nElements: %d\tError: %.2e', ...
 			length(firstMesh.elements), errors(3, j));
 	end
 
@@ -111,7 +111,7 @@ function comparison(~)
 	errors(4, j) = errorEstimate(secondMesh, up, uh);
 	sizes(4, j) = length(secondMesh.elements);
 
-	fprintf(fileID, '\nElements: %d\tError: %.2e.', ...
+	fprintf(fileID, '\nElements: %d\tError: %.2e', ...
 			length(secondMesh.elements), errors(4, j));
 
 	for j = 2:steps
@@ -122,7 +122,7 @@ function comparison(~)
 		errors(4, j) = errorEstimate(secondMesh, up, uh);
 		sizes(4, j) = length(secondMesh.elements);
 		
-		fprintf(fileID, '\nElements: %d\tError: %.2e.', ...
+		fprintf(fileID, '\nElements: %d\tError: %.2e', ...
 			length(secondMesh.elements), errors(4, j));
 	end
 
@@ -136,16 +136,16 @@ function comparison(~)
 	% Alpha = 5/3.
 	nexttile;
 	loglog(sizes(1, :), errors(1, :), ...
-		DisplayName='Simple, \alpha = 5/3.', LineWidth=2, ...
+		DisplayName='Simple, \alpha = 5/3', LineWidth=2, ...
 		Color=orange);
 	hold on;
 
 	loglog(sizes(2, :), errors(2, :), ...
-		DisplayName='Adaptive, \alpha = 5/3.', LineWidth=2, ...
+		DisplayName='Adaptive, \alpha = 5/3', LineWidth=2, ...
 		Color=green);
 
-	xlabel("Number of elements");
-	ylabel("|u - u_h|_{1, \Omega}");
+	xlabel('Number of elements');
+	ylabel('|u - u_h|_{1, \Omega}');
 
 	hold off;
 	legend;
@@ -160,16 +160,16 @@ function comparison(~)
 	% Alpha = 10.
 	nexttile;
 	loglog(sizes(3, :), errors(3, :), ...
-		DisplayName='Simple, \alpha = 10.', LineWidth=2, ...
+		DisplayName='Simple, \alpha = 10', LineWidth=2, ...
 		Color=orange);
 	hold on;
 
 	loglog(sizes(4, :), errors(4, :), ...
-		DisplayName='Adaptive, \alpha = 10.', LineWidth=2, ...
+		DisplayName='Adaptive, \alpha = 10', LineWidth=2, ...
 		Color=green);
 
-	xlabel("Number of elements");
-	ylabel("|u - u_h|_{1, \Omega}");
+	xlabel('Number of elements');
+	ylabel('|u - u_h|_{1, \Omega}');
 
 	hold off;
 	legend;
@@ -178,11 +178,11 @@ function comparison(~)
 		set(gca,'color', bck)
 		set(legend, 'color', bck)
 		
-		exportgraphics(gcf, "../gallery/comparison.pdf", ...
+		exportgraphics(gcf, '../gallery/comparison.pdf', ...
 			'ContentType', 'vector', 'BackgroundColor', bck)
 
 	else
-		exportgraphics(gcf, "../gallery/comparison.pdf", ...
+		exportgraphics(gcf, '../gallery/comparison.pdf', ...
 			'ContentType', 'vector')
 	end
 end

@@ -1,53 +1,53 @@
 Condition number, alpha = 5/3.
 Simple.
 
-Elements: 4	Cond.: 5.83e+00.
-Elements: 8	Cond.: 2.53e+01.
-Elements: 16	Cond.: 1.03e+02.
-Elements: 32	Cond.: 4.14e+02.
-Elements: 64	Cond.: 1.66e+03.
-Elements: 128	Cond.: 6.64e+03.
-Elements: 256	Cond.: 2.66e+04.
-Elements: 512	Cond.: 1.06e+05.
-Elements: 1024	Cond.: 4.25e+05.
-Elements: 2048	Cond.: 1.70e+06.
+Elements: 4	Cond.: 5.83e+00
+Elements: 8	Cond.: 2.53e+01
+Elements: 16	Cond.: 1.03e+02
+Elements: 32	Cond.: 4.14e+02
+Elements: 64	Cond.: 1.66e+03
+Elements: 128	Cond.: 6.64e+03
+Elements: 256	Cond.: 2.66e+04
+Elements: 512	Cond.: 1.06e+05
+Elements: 1024	Cond.: 4.25e+05
+Elements: 2048	Cond.: 1.70e+06
 
 Adaptive.
 
-Elements: 4	Cond.: 5.83e+00.
-Elements: 5	Cond.: 1.04e+01.
-Elements: 6	Cond.: 1.83e+01.
-Elements: 8	Cond.: 5.30e+01.
-Elements: 10	Cond.: 6.29e+01.
-Elements: 13	Cond.: 8.99e+01.
-Elements: 16	Cond.: 1.78e+02.
-Elements: 20	Cond.: 2.73e+02.
-Elements: 25	Cond.: 3.06e+02.
-Elements: 31	Cond.: 7.14e+02.
+Elements: 4	Cond.: 5.83e+00
+Elements: 5	Cond.: 1.04e+01
+Elements: 6	Cond.: 1.83e+01
+Elements: 8	Cond.: 5.30e+01
+Elements: 10	Cond.: 6.29e+01
+Elements: 13	Cond.: 8.99e+01
+Elements: 16	Cond.: 1.78e+02
+Elements: 20	Cond.: 2.73e+02
+Elements: 25	Cond.: 3.06e+02
+Elements: 31	Cond.: 7.14e+02
 
 Condition number, alpha = 10.
 Simple.
 
-Elements: 4	Cond.: 5.83e+00.
-Elements: 8	Cond.: 2.53e+01.
-Elements: 16	Cond.: 1.03e+02.
-Elements: 32	Cond.: 4.14e+02.
-Elements: 64	Cond.: 1.66e+03.
-Elements: 128	Cond.: 6.64e+03.
-Elements: 256	Cond.: 2.66e+04.
-Elements: 512	Cond.: 1.06e+05.
-Elements: 1024	Cond.: 4.25e+05.
-Elements: 2048	Cond.: 1.70e+06.
+Elements: 4	Cond.: 5.83e+00
+Elements: 8	Cond.: 2.53e+01
+Elements: 16	Cond.: 1.03e+02
+Elements: 32	Cond.: 4.14e+02
+Elements: 64	Cond.: 1.66e+03
+Elements: 128	Cond.: 6.64e+03
+Elements: 256	Cond.: 2.66e+04
+Elements: 512	Cond.: 1.06e+05
+Elements: 1024	Cond.: 4.25e+05
+Elements: 2048	Cond.: 1.70e+06
 
 Adaptive.
 
-Elements: 4	Cond.: 5.83e+00.
-Elements: 5	Cond.: 1.04e+01.
-Elements: 6	Cond.: 2.13e+01.
-Elements: 8	Cond.: 5.75e+01.
-Elements: 10	Cond.: 1.24e+02.
-Elements: 13	Cond.: 2.15e+02.
-Elements: 16	Cond.: 4.83e+02.
-Elements: 20	Cond.: 6.72e+02.
-Elements: 25	Cond.: 9.42e+02.
-Elements: 31	Cond.: 2.07e+03.
+Elements: 4	Cond.: 5.83e+00
+Elements: 5	Cond.: 1.04e+01
+Elements: 6	Cond.: 2.13e+01
+Elements: 8	Cond.: 5.75e+01
+Elements: 10	Cond.: 1.24e+02
+Elements: 13	Cond.: 2.15e+02
+Elements: 16	Cond.: 4.83e+02
+Elements: 20	Cond.: 6.72e+02
+Elements: 25	Cond.: 9.42e+02
+Elements: 31	Cond.: 2.07e+03

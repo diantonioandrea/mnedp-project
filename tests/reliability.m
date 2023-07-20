@@ -36,7 +36,7 @@ function reliability(~)
 	errors(1, j) = errorEstimate(uMesh, up, uh);
 	sizes(1, j) = max(meshSizes);
 
-	fprintf(fileID, '\nSize: %d\tError: %.2e\tEstimator: %.2e.', ...
+	fprintf(fileID, '\nSize: %d\tError: %.2e\tEstimator: %.2e', ...
 			sizes(1, j), errors(1, j), estimates(1, j));
 
 	for j = 2:steps
@@ -48,7 +48,7 @@ function reliability(~)
 		errors(1, j) = errorEstimate(uMesh, up, uh);
 		sizes(1, j) = max(meshSizes);
 		
-		fprintf(fileID, '\nSize: %d\tError: %.2e\tEstimator: %.2e.', ...
+		fprintf(fileID, '\nSize: %d\tError: %.2e\tEstimator: %.2e', ...
 			sizes(1, j), errors(1, j), estimates(1, j));
 	end
 
@@ -70,7 +70,7 @@ function reliability(~)
 	errors(2, j) = errorEstimate(uMesh, up, uh);
 	sizes(2, j) = max(meshSizes);
 
-	fprintf(fileID, '\nSize: %d\tError: %.2e\tEstimator: %.2e.', ...
+	fprintf(fileID, '\nSize: %d\tError: %.2e\tEstimator: %.2e', ...
 			sizes(2, j), errors(2, j), estimates(2, j));
 
 	for j = 2:steps
@@ -82,17 +82,17 @@ function reliability(~)
 		errors(2, j) = errorEstimate(uMesh, up, uh);
 		sizes(2, j) = max(meshSizes);
 		
-		fprintf(fileID, '\nSize: %d\tError: %.2e\tEstimator: %.2e.', ...
+		fprintf(fileID, '\nSize: %d\tError: %.2e\tEstimator: %.2e', ...
 			sizes(2, j), errors(2, j), estimates(2, j));
 	end
 	
 	%% Constants interpolation.
 	
 	% Estimates the lower bounds for the constant C.	
-	fprintf(fileID, '\n\nConstants lower bounds.');
-	fprintf(fileID, '\n\nalpha = 5/3 Lower bound: C >= %.2e.', ...
+	fprintf(fileID, '\n\nConstants lower bounds');
+	fprintf(fileID, '\n\nalpha = 5/3 Lower bound: C >= %.2e', ...
 		max(errors(1, :) ./ estimates(1, :)));
-	fprintf(fileID, '\nalpha = 10 Lower bound: C >= %.2e.', ...
+	fprintf(fileID, '\nalpha = 10 Lower bound: C >= %.2e', ...
 		max(errors(2, :) ./ estimates(2, :)));
 
 	%% Graphics.
@@ -113,8 +113,8 @@ function reliability(~)
 		DisplayName='\alpha = 5/3 \eta', LineWidth=2, ...
 		Color=orange);
 
-	xlabel("Mesh Size (h)");
-	ylabel("|u - u_h|_{1, \Omega}, \eta");
+	xlabel('Mesh Size (h)');
+	ylabel('|u - u_h|_{1, \Omega}, \eta');
 
 	hold off;
 	legend(Location='southeast');
@@ -137,8 +137,8 @@ function reliability(~)
 		DisplayName='\alpha = 10 \eta', LineWidth=2, ...
 		Color=orange);
 
-	xlabel("Mesh Size (h)");
-	ylabel("|u - u_h|_{1, \Omega}, \eta");
+	xlabel('Mesh Size (h)');
+	ylabel('|u - u_h|_{1, \Omega}, \eta');
 
 	hold off;
 	legend(Location='southeast');
@@ -147,11 +147,11 @@ function reliability(~)
 		set(gca,'color', bck)
 		set(legend, 'color', bck)
 		
-		exportgraphics(gcf, "../gallery/reliability.pdf", ...
+		exportgraphics(gcf, '../gallery/reliability.pdf', ...
 			'ContentType', 'vector', 'BackgroundColor', bck)
 
 	else
-		exportgraphics(gcf, "../gallery/reliability.pdf", ...
+		exportgraphics(gcf, '../gallery/reliability.pdf', ...
 			'ContentType', 'vector')
 	end
 end

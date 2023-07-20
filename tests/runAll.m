@@ -1,7 +1,7 @@
 % Andrea Di Antonio, 858798
 % Runs every test.
 function runAll(~)
-	fprintf("Running all scripts.")
+	fprintf('Running all scripts')
 	
 	if nargin == 0
 		reliability;
@@ -42,5 +42,5 @@ function runAll(~)
 		close(gcf);
 	end
 
-	fprintf("\nDone.\n")
+	fprintf('\nDone\n')
 end

@@ -30,8 +30,8 @@ function graphical(~)
 		DisplayName='u_h(x), \alpha = 5/3', LineWidth=2, ...
 		Color=orange,LineStyle='--');
 
-	xlabel("x");
-	ylabel("u(x), u_h(x)");
+	xlabel('x');
+	ylabel('u(x), u_h(x)');
 
     hold off;
     legend(Location='northwest');
@@ -60,8 +60,8 @@ function graphical(~)
 		DisplayName='u_h(x), \alpha = 10', LineWidth=2, ...
 		Color=orange,LineStyle='--');
 
-	xlabel("x");
-	ylabel("u(x), u_h(x)");
+	xlabel('x');
+	ylabel('u(x), u_h(x)');
 
     hold off;
     legend(Location='northwest');
@@ -70,11 +70,11 @@ function graphical(~)
 		set(gca,'color', bck)
 		set(legend, 'color', bck)
 		
-		exportgraphics(gcf, "../gallery/graphical.pdf", ...
+		exportgraphics(gcf, '../gallery/graphical.pdf', ...
 			'ContentType', 'vector', 'BackgroundColor', bck)
 
 	else
-		exportgraphics(gcf, "../gallery/graphical.pdf", ...
+		exportgraphics(gcf, '../gallery/graphical.pdf', ...
 			'ContentType', 'vector')
 	end
 end

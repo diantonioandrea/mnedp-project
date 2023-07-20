@@ -33,7 +33,7 @@ function errorTrend(~)
 	errors(1, j) = errorEstimate(uMesh, up, uh);
 	sizes(1, j) = max(meshSizes);
 
-	fprintf(fileID, '\nSize: %d\tError: %.2e.', ...
+	fprintf(fileID, '\nSize: %d\tError: %.2e', ...
 			sizes(1, j), errors(1, j));
 
 	for j = 2:steps
@@ -44,7 +44,7 @@ function errorTrend(~)
 		errors(1, j) = errorEstimate(uMesh, up, uh);
 		sizes(1, j) = max(meshSizes);
 		
-		fprintf(fileID, '\nSize: %d\tError: %.2e.', ...
+		fprintf(fileID, '\nSize: %d\tError: %.2e', ...
 			sizes(1, j), errors(1, j));
 	end
 
@@ -64,7 +64,7 @@ function errorTrend(~)
 	errors(2, j) = errorEstimate(uMesh, up, uh);
 	sizes(2, j) = max(meshSizes);
 
-	fprintf(fileID, '\nSize: %d\tError: %.2e.', ...
+	fprintf(fileID, '\nSize: %d\tError: %.2e', ...
 			sizes(2, j), errors(2, j));
 
 	for j = 2:steps
@@ -75,7 +75,7 @@ function errorTrend(~)
 		errors(2, j) = errorEstimate(uMesh, up, uh);
 		sizes(2, j) = max(meshSizes);
 		
-		fprintf(fileID, '\nSize: %d\tError: %.2e.', ...
+		fprintf(fileID, '\nSize: %d\tError: %.2e', ...
 			sizes(2, j), errors(2, j));
 	end
 
@@ -95,8 +95,8 @@ function errorTrend(~)
 		DisplayName='\alpha = 10', LineWidth=2, ...
 		Color=green);
 	
-	xlabel("Mesh Size (h)");
-	ylabel("|u - u_h|_{1, \Omega}");
+	xlabel('Mesh Size (h)');
+	ylabel('|u - u_h|_{1, \Omega}');
 
 	% Interpolation
 
@@ -108,16 +108,16 @@ function errorTrend(~)
 	
 	loglog(sizes(1, :), exp(coeffs(1, 2)) * (sizes(1, :) .^ ...
 		coeffs(1, 1)), LineWidth=2, Color=blue, ...
-		LineStyle=":", DisplayName="\alpha = 5/3 Interpolant.");
+		LineStyle='--', DisplayName='\alpha = 5/3 Interpolant');
 	loglog(sizes(2, :), exp(coeffs(2, 2)) * (sizes(2, :) .^ ...
 		coeffs(2, 1)), LineWidth=2, Color=blue, ...
-		LineStyle=":", DisplayName="\alpha = 10 Interpolant.");
+		LineStyle='--', DisplayName='\alpha = 10 Interpolant');
 	
 	% Prints coefficients.
-	fprintf(fileID, "\n\nLoglog interpolation.");
-	fprintf(fileID, "\n\nalpha = 5/3 Interpolant: y = %fx + (%f).", ...
+	fprintf(fileID, '\n\nLoglog interpolation');
+	fprintf(fileID, '\n\nalpha = 5/3 Interpolant: y = %fx + (%f)', ...
 		coeffs(1, 1), coeffs(1, 2));
-	fprintf(fileID, "\nalpha = 10 Interpolant: y = %fx + (%f).\n", ...
+	fprintf(fileID, '\nalpha = 10 Interpolant: y = %fx + (%f).\n', ...
 		coeffs(2, 1), coeffs(2, 2));
 
 	hold off;
@@ -129,11 +129,11 @@ function errorTrend(~)
 		set(gca,'color', bck)
 		set(legend, 'color', bck)
 		
-		exportgraphics(gcf, "../gallery/errorTrend.pdf", ...
+		exportgraphics(gcf, '../gallery/errorTrend.pdf', ...
 			'ContentType', 'vector', 'BackgroundColor', bck)
 
 	else
-		exportgraphics(gcf, "../gallery/errorTrend.pdf", ...
+		exportgraphics(gcf, '../gallery/errorTrend.pdf', ...
 			'ContentType', 'vector')
 	end
 end

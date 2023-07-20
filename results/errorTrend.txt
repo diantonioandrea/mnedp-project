@@ -1,30 +1,30 @@
 Errors evaluation, alpha = 5/3.
 
-Size: 2.500000e-01	Error: 1.45e-01.
-Size: 1.250000e-01	Error: 7.47e-02.
-Size: 6.250000e-02	Error: 3.79e-02.
-Size: 3.125000e-02	Error: 1.91e-02.
-Size: 1.562500e-02	Error: 9.63e-03.
-Size: 7.812500e-03	Error: 4.84e-03.
-Size: 3.906250e-03	Error: 2.43e-03.
-Size: 1.953125e-03	Error: 1.22e-03.
-Size: 9.765625e-04	Error: 6.10e-04.
-Size: 4.882812e-04	Error: 3.06e-04.
+Size: 2.500000e-01	Error: 1.45e-01
+Size: 1.250000e-01	Error: 7.47e-02
+Size: 6.250000e-02	Error: 3.79e-02
+Size: 3.125000e-02	Error: 1.91e-02
+Size: 1.562500e-02	Error: 9.63e-03
+Size: 7.812500e-03	Error: 4.84e-03
+Size: 3.906250e-03	Error: 2.43e-03
+Size: 1.953125e-03	Error: 1.22e-03
+Size: 9.765625e-04	Error: 6.10e-04
+Size: 4.882812e-04	Error: 3.06e-04
 
 Errors evaluation, alpha = 10.
 
-Size: 2.500000e-01	Error: 2.11e-01.
-Size: 1.250000e-01	Error: 1.25e-01.
-Size: 6.250000e-02	Error: 6.51e-02.
-Size: 3.125000e-02	Error: 3.28e-02.
-Size: 1.562500e-02	Error: 1.64e-02.
-Size: 7.812500e-03	Error: 8.23e-03.
-Size: 3.906250e-03	Error: 4.11e-03.
-Size: 1.953125e-03	Error: 2.06e-03.
-Size: 9.765625e-04	Error: 1.03e-03.
-Size: 4.882812e-04	Error: 5.14e-04.
+Size: 2.500000e-01	Error: 2.11e-01
+Size: 1.250000e-01	Error: 1.25e-01
+Size: 6.250000e-02	Error: 6.51e-02
+Size: 3.125000e-02	Error: 3.28e-02
+Size: 1.562500e-02	Error: 1.64e-02
+Size: 7.812500e-03	Error: 8.23e-03
+Size: 3.906250e-03	Error: 4.11e-03
+Size: 1.953125e-03	Error: 2.06e-03
+Size: 9.765625e-04	Error: 1.03e-03
+Size: 4.882812e-04	Error: 5.14e-04
 
-Loglog interpolation.
+Loglog interpolation
 
-alpha = 5/3 Interpolant: y = 0.989789x + (-0.536034).
+alpha = 5/3 Interpolant: y = 0.989789x + (-0.536034)
 alpha = 10 Interpolant: y = 0.979183x + (-0.070194).
