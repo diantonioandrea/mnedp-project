@@ -25,7 +25,7 @@ function [estimates, estimator] = estimate(mesh, f)
 	estimates = sqrt(estimates);
 end
 
-function jump = gradJump(mesh, uh, x)
+function jump = absGradJump(mesh, uh, x)
 	if x <= mesh.a || x >= mesh.b; jump = 0; return; end
 	ind = find(mesh.nodes == x);
 
@@ -35,9 +35,5 @@ function jump = gradJump(mesh, uh, x)
 	gs = (uh(ind) - uh(ind - 1)) / hs;
 	gd = (uh(ind + 1) - uh(ind)) / hd;
 
-	jump = gs - gd;
-end
-
-function jump = absGradJump(mesh, uh, x)
-	jump = abs(gradJump(mesh, uh, x));
+	jump = abs(gs - gd);
 end

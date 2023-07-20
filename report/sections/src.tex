@@ -1,23 +1,33 @@
 \subsection{Mesh builder}
 
+The following function builds a mesh with either a specified number of nodes on $[a, b]$\footnote{The default values for $a$ and $b$ resemble the set $\Omega = [0, 1]$ introduced as the domain for the Poisson problem.} or with an explicit array of nodes which gets sorted. The function defines then two useful structures: the elements of the mesh and the array of elements' centres, which is used on mesh refinements.
+
 \lstinputlisting[style=matlab, firstline=11, caption=src/builder.m]{../src/builder.m}
 
 \newpage
 \subsection{Error Estimator}
+
+The following function defines the error estimator discussed on \nameref{error_estimator} which will be used to evaluate the array of local errors and the full estimator for both mesh refinement and adaptive method reliability testings.
 
 \lstinputlisting[style=matlab, firstline=3, caption=src/estimate.m]{../src/estimate.m}
 
 \newpage
 \subsection{Mesh Marker}
 
+The following function is used to mark the element with the highest local error to obtain the array of marked elements.
+
 \lstinputlisting[style=matlab, firstline=4, caption=src/marker.m]{../src/marker.m}
 
 \newpage
 \subsection{Mesh Refiner}
 
+The following function is used to refine the meshes either for the uniform refinement or the adaptive one. On marked being empty it completely refines the whole mesh inserting a new node on the centres of the previous elements.
+
 \lstinputlisting[style=matlab, firstline=4, caption=src/refiner.m]{../src/refiner.m}
 
 \newpage
 \subsection{Poisson Solver}
+
+The following function is used to evaluate the matrix $\underline{\underline{A}}$ and the vector $\underline{f}$, here denoted as $\underline{b}$, as discussed on \nameref{fem_system} and solves the linear system whose solution makes up for the FEM solution to the Poisson problem.
 
 \lstinputlisting[style=matlab, firstline=6, caption=src/solver.m]{../src/solver.m}

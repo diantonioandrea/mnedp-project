@@ -12,7 +12,7 @@ function [uh, A, b] = solver(mesh, f)
 	b = zeros(length(nds) - 2, 1);
 
 	% Build the matrix A and the vector b.
-	% First row, DBC.
+	% First row.
 	j = 1;
 
 	hs = szs(j);
@@ -41,7 +41,7 @@ function [uh, A, b] = solver(mesh, f)
 		b(j) = .5 * (hs * f(xms) + hd * f(xmd));
 	end
 
-	% Last row, DBC.
+	% Last row.
 	j = length(nds) - 2;
 
 	hs = szs(j);
