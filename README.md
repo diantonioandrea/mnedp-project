@@ -6,7 +6,7 @@ Codes and report for the exam of the **Metodi Numerici per Equazioni alle Deriva
 
 ## Code
 
-Implementation of an "Adaptive 1D 1st-order Lagrange FEM" method for solving the Poisson problem with Dirichlet boundary data.
+Implementation of an "Adaptive 1D 1st-order Lagrange FEM" method for solving the Poisson problem with Dirichlet boundary conditions.
 
 ## Contents
 
